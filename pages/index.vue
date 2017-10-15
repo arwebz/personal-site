@@ -1,58 +1,32 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        personal-site
-      </h1>
-      <h2 class="subtitle">
-        Personal Website
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
-      </div>
-    </div>
-  </section>
+  <page-section :title="title">
+    <p>
+      My name is Martin Fracker. I graduated from Texas A&M University with a B.S. in Computer Science.
+      I excel at many things including programming in Rails, CSharp, Node.js, Vue.js, Angular.js,
+      test-driven development, and agile development. My passion is writing programs in C++ specifically
+      on the Linux platform using Emacs, but I have experience writing web applications in ASP.NET MVC,
+      Vue.js, Angular.js, and Rails. Testing first is just as important to me as a finished product, and
+      when working in a team I enjoy employing agile best practices.
+    </p>
+  </page-section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
+import PageSection from '~/components/PageSection'
 export default {
   components: {
-    Logo
+    PageSection
+  },
+  data () {
+    return {
+      title: 'Self-motivated Software Developer'
+    }
+  },
+  head: {
+    title: this.title
   }
 }
 </script>
 
 <style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>

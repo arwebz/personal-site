@@ -1,0 +1,7 @@
+{
+  "path-intellisense.mappings": {
+    "~/": "${workspaceRoot}"
+  },
+  "vetur.format.scriptInitialIndent": false,
+  "vetur.format.styleInitialIndent": false
+}

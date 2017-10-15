@@ -13,9 +13,12 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/bootstrap-vue": "^2.0.2",
+    "lodash": "^4.17.4",
     "nuxt": "^1.0.0-rc11"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.77",
     "babel-eslint": "^7.2.3",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
@@ -24,6 +27,10 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "less": "^3.0.0-alpha.3",
+    "less-loader": "^4.0.5",
+    "pug": "^2.0.0-rc.4",
+    "pug-loader": "^2.3.0"
   }
 }
