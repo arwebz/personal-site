@@ -1,5 +1,5 @@
 <template>
-  <page-section :title="title">
+  <page-section title="Projects">
     <b-card-group columns>
       <project name="ARM Lenda" time="June 2016 to Present" link="www.armlend.com" client="Ag Resource Management">
         Currently working in a team of six developers to develop a management
@@ -49,14 +49,6 @@ export default {
   components: {
     PageSection,
     Project
-  },
-  data () {
-    return {
-      title: 'Projects'
-    }
-  },
-  head: {
-    title: this.title
   }
 }
 </script>

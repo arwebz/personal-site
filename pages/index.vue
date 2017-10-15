@@ -1,5 +1,5 @@
 <template>
-  <page-section :title="title">
+  <page-section title="Self-motivated Software Developer">
     <p>
       My name is Martin Fracker. I graduated from Texas A&M University with a B.S. in Computer Science.
       I excel at many things including programming in Rails, CSharp, Node.js, Vue.js, Angular.js,
@@ -16,14 +16,6 @@ import PageSection from '~/components/PageSection'
 export default {
   components: {
     PageSection
-  },
-  data () {
-    return {
-      title: 'Self-motivated Software Developer'
-    }
-  },
-  head: {
-    title: this.title
   }
 }
 </script>
