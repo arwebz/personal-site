@@ -1,24 +1,45 @@
-<template>
-  <page-section title="Self-motivated Software Developer">
-    <p>
-      My name is Martin Fracker. I graduated from Texas A&M University with a B.S. in Computer Science.
-      I excel at many things including programming in Rails, CSharp, Node.js, Vue.js, Angular.js,
-      test-driven development, and agile development. My passion is writing programs in C++ specifically
-      on the Linux platform using Emacs, but I have experience writing web applications in ASP.NET MVC,
-      Vue.js, Angular.js, and Rails. Testing first is just as important to me as a finished product, and
-      when working in a team I enjoy employing agile best practices.
-    </p>
-  </page-section>
+<template lang="pug">
+  div
+    page-section(title="Software Developer")
+      about-me
+    page-section(color="#e3fdff")
+      b-row.skills
+        skill.col-md(name="Full Stack Development" icon="list-alt") I have experience developing apps from the user to experience to data storage. To this extent, I am skilled in several different technologies including Ruby on Rails, Vue.js, Nuxt.js Angular.js, ASP.NET Web API and MVC, Node.js, MS SQL, and Postgres SQL.
+        skill.col-md(name="Consulting" icon="handshake-o") Worked at Improving as a Software Consultant since April of 2016. For the past year, worked on and put into production an enterprise loan origination application that has originated over a half-billion dollars worth of loans.
+        skill.col-md(name="DevOps" icon="wrench") I have experience creating Continuous Integration and Delivery pipelines using Travis CI and Jenkins as well as working in a cross-functional Scrum team to deliver quality code to the client frequently.
+    page-section(title="Contact Me")
+      contact-me
+    page-section.text-center(color="#ffefd3")
+      social-media-button.social(for="facebook")
+      social-media-button.social(for="linkedin")
+      social-media-button.social(for="github")
+      copyright.copyright
 </template>
 
 <script>
+import AboutMe from '~/components/AboutMe'
+import ContactMe from '~/components/ContactMe'
+import Copyright from '~/components/Copyright'
 import PageSection from '~/components/PageSection'
+import Skill from '~/components/Skill'
+import SocialMediaButton from '~/components/SocialMediaButton'
 export default {
   components: {
-    PageSection
+    AboutMe,
+    ContactMe,
+    Copyright,
+    PageSection,
+    Skill,
+    SocialMediaButton
   }
 }
 </script>
 
-<style>
+<style lang="less" scoped>
+  .social {
+    display: inline-block;
+  }
+  .copyright {
+    padding-top: 50px;
+  }
 </style>

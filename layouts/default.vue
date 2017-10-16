@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     nav-bar
-    b-container.main
+    div.main
       nuxt
 </template>
 
@@ -15,7 +15,4 @@ export default {
 </script>
 
 <style scoped>
-.main {
-  padding-top: 15px;
-}
 </style>

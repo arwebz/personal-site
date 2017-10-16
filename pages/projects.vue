@@ -11,7 +11,20 @@
         Angular.js to Vue.js. Since the product's release, ARM has closed more
         than a half-billion dollars worth of loans.
       </project>
-      <project name="Interview App" time="April 2016 to June 2016" link="www.improving.com" internal>
+      <project name="Morphling" time="Jan 2017 to April 2017" link="https://github.com/Towerism/csce438-hw4" github>
+        Worked in a group of three to develop a generalized board game server in
+        order to facilitate a wide variety of games between two players without
+        duplicating a lot of the server boilerplate. My role was to create a
+        framework to capture board game logic and to write to example games in
+        the framework.
+      </project>
+      <project name="Scalable Chat Room" time="Jan 2017 to April 2017" link="https://github.com/Towerism/csce438-hw4" github>
+        Worked in a group of two to develop a scalable chat room service. Using
+        Google Protobuf, Google RPC, and C++, managed to create a fault tolerant
+        system through which users could communicate with each other across
+        multiple devices.
+      </project>
+      <project name="Interview App" time="April 2016 to June 2016" link="https://www.improving.com" internal>
         Configured, designed, and developed the initial iteration of a web
         application that would allow hiring staff to record and view candidate
         details online. Using technologies such as ASP.NET MVC, Highway Data,
@@ -31,12 +44,6 @@
         encrypted files, and hiding and retrieving data using image and audio
         steganography. My roll was to implement image and audio steganography to
         hide data.
-      </project>
-      <project name="Scalable Chat Room" time="Jan 2017 to April 2017" link="https://github.com/Towerism/csce438-hw4" github>
-        Worked in a group of two to develop a scalable chat room service. Using
-        Google Protobuf, Google RPC, and C++, managed to create a fault tolerant
-        system through which users could communicate with each other across
-        multiple devices.
       </project>
     </b-card-group>
   </page-section>

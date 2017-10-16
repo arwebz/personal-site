@@ -14,7 +14,8 @@ module.exports = {
     ]
   },
   modules: [
-    '@nuxtjs/bootstrap-vue'
+    '@nuxtjs/bootstrap-vue',
+    '@nuxtjs/font-awesome'
   ],
   /*
   ** Customize the progress bar color
