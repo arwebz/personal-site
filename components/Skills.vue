@@ -1,10 +1,10 @@
 <template>
   <b-row>
     <skill class="col-md" name="Full Stack Development" icon="list-alt">
-      I have experience developing apps from the user to experience to data
-      storage. To this extent, I am skilled in several different technologies
-      including Ruby on Rails, Vue.js, Nuxt.js, Angular.js, ASP.NET Web API and
-      MVC, Node.js, MS SQL, and Postgres SQL.
+      I have various web development skills from front-end to back-end
+      development. To this extent, I am skilled in several different
+      technologies including Ruby on Rails, Vue.js, Nuxt.js, Angular.js, ASP.NET
+      Web API and MVC, Node.js, MS SQL, and Postgres SQL.
     </skill>
     <skill class="col-md" name="Consulting" icon="handshake-o">
       I have worked at Improving as a Software Consultant since April of 2016. For the
