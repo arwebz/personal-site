@@ -1,7 +1,7 @@
 <template>
   <page-section title="Projects">
     <b-card-group columns>
-      <project name="ARM Lenda" time="June 2016 to Present" link="www.armlend.com" client="Ag Resource Management">
+      <project name="ARM Lenda" time="June 2016 to Present" link="http://www.armlend.com" client="Ag Resource Management">
         Currently working in a team of six developers to develop a management
         operations web application for a company which provides risk management
         solutions for agribusiness. Using the Agile Scrum methodology and
