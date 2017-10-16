@@ -9,37 +9,19 @@
         skill.col-md(name="DevOps" icon="wrench") I know how to create Continuous Integration and Delivery pipelines using Travis CI and Jenkins as well as how to work in a cross-functional Scrum team to deliver quality code to the client frequently.
     page-section(title="Contact Me")
       contact-me
-    page-section.text-center(color="#ffefd3")
-      social-media-button.social(for="facebook")
-      social-media-button.social(for="linkedin")
-      social-media-button.social(for="github")
-      copyright.copyright
 </template>
 
 <script>
 import AboutMe from '~/components/AboutMe'
 import ContactMe from '~/components/ContactMe'
-import Copyright from '~/components/Copyright'
 import PageSection from '~/components/PageSection'
 import Skill from '~/components/Skill'
-import SocialMediaButton from '~/components/SocialMediaButton'
 export default {
   components: {
     AboutMe,
     ContactMe,
-    Copyright,
     PageSection,
-    Skill,
-    SocialMediaButton
+    Skill
   }
 }
 </script>
-
-<style lang="less" scoped>
-  .social {
-    display: inline-block;
-  }
-  .copyright {
-    padding-top: 50px;
-  }
-</style>
