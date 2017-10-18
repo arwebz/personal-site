@@ -5,7 +5,7 @@
       input(type="hidden" v-model="honeypot")
       .form-row
         .form-group.col-md
-          input#name.form-control(type="text" v-model="form.name" placeholder="Name" required)
+          input#fromName.form-control(type="text" v-model="form.fromName" placeholder="Name" required)
         .form-group.col-md
           input#email.form-control(style="width: 100%" type="email" v-model="form.email" placeholder="Email" required)
       .form-row
@@ -31,7 +31,7 @@ export default {
   data () {
     return {
       form: {
-        name: '',
+        fromName: '',
         email: '',
         subject: '',
         message: ''
@@ -46,9 +46,7 @@ export default {
       if (this.honeypot !== '') {
         return
       }
-      let formData = querystring.stringify({
-        'form-name': this.formName, ...this.form
-      })
+      let formData = querystring.stringify(this.form)
       axios.post(this.action, formData, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
