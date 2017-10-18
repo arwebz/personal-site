@@ -21,7 +21,7 @@
 
 <script>
 import axios from 'axios'
-import querystring from 'querystring'
+import querystring from 'qs'
 
 import PageSection from '~/components/PageSection.vue'
 export default {
