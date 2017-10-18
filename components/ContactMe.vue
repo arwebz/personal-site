@@ -16,7 +16,8 @@
           textarea#message.form-control(type="text" v-model="form.message" placeholder="Message" required)
       .form-row
         .col
-          button.btn.btn-info.float-right Submit
+          spinner-button.float-right(:disabled="isLoading || status === true" :isLoading="isLoading" :status="status")
+            span Submit
 </template>
 
 <script>
@@ -24,9 +25,11 @@ import axios from 'axios'
 import querystring from 'qs'
 
 import PageSection from '~/components/PageSection.vue'
+import SpinnerButton from '~/components/SpinnerButton.vue'
 export default {
   components: {
-    PageSection
+    PageSection,
+    SpinnerButton
   },
   data () {
     return {
@@ -38,7 +41,9 @@ export default {
       },
       action: 'contact',
       formName: 'contact',
-      honeypot: ''
+      honeypot: '',
+      isLoading: false,
+      status: ''
     }
   },
   methods: {
@@ -47,7 +52,14 @@ export default {
         return
       }
       let formData = querystring.stringify({ 'form-name': this.formName, ...this.form })
-      axios.post(this.action, formData)
+      this.isLoading = true
+      axios.post(this.action, formData).then(() => {
+        this.isLoading = false
+        this.status = true
+      }).catch(() => {
+        this.status = false
+        setTimeout(() => { this.status = '' }, 2000)
+      })
     }
   }
 }
