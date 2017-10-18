@@ -3,5 +3,6 @@
     "~/": "${workspaceRoot}"
   },
   "vetur.format.scriptInitialIndent": false,
-  "vetur.format.styleInitialIndent": false
+  "vetur.format.styleInitialIndent": false,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true
 }

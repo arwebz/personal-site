@@ -13,6 +13,9 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  env: {
+    emailUser: process.env.EMAIL_USER
+  },
   modules: [
     '@nuxtjs/bootstrap-vue',
     '@nuxtjs/font-awesome'
