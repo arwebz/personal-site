@@ -46,7 +46,7 @@ export default {
       if (this.honeypot !== '') {
         return
       }
-      let formData = querystring.stringify(this.form)
+      let formData = querystring.stringify({ 'form-name': this.formName, ...this.form })
       axios.post(this.action, formData, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
