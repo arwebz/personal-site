@@ -47,11 +47,7 @@ export default {
         return
       }
       let formData = querystring.stringify({ 'form-name': this.formName, ...this.form })
-      axios.post(this.action, formData, {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }
-      })
+      axios.post(this.action, formData)
     }
   }
 }
