@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     p If you have any questions about my skills, any of the projects I have worked on, or would like to set up an interview, please send me an email using the form below.
-    form(@submit.prevent="onSubmit")
+    form(@submit.prevent="onSubmit" :action="action" :name="formName" netlify)
       input(type="hidden" v-model="honeypot")
       .form-row
         .form-group.col-md
@@ -36,18 +36,20 @@ export default {
         subject: '',
         message: ''
       },
+      action: 'contact',
+      formName: 'contact',
       honeypot: ''
     }
   },
   methods: {
     onSubmit () {
       if (this.honeypot !== '') {
-        return;
+        return
       }
       let formData = querystring.stringify({
-        'form-name': 'contact', ...this.form
+        'form-name': this.formName, ...this.form
       })
-      axios.post('/', formData, {
+      axios.post(this.action, formData, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         }
