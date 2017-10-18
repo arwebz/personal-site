@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     p If you have any questions about my skills, any of the projects I have worked on, or would like to set up an interview, please send me an email using the form below.
-    form(:action="thank-you" :name="formName" netlify)
+    form(:action="action" :name="formName" netlify)
       input(type="hidden" v-model="honeypot")
       .form-row
         .form-group.col-md
@@ -36,7 +36,7 @@ export default {
         subject: '',
         message: ''
       },
-      action: 'contact',
+      action: 'thank-you',
       formName: 'contact',
       honeypot: ''
     }
