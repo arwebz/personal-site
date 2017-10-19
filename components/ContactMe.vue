@@ -5,15 +5,15 @@
       input(type="hidden" v-model="honeypot")
       .form-row
         .form-group.col-md
-          input#fromName.form-control(type="text" v-model="form.fromName" placeholder="Name" required)
+          input.form-control(name="fromName" type="text" v-model="form.fromName" placeholder="Name" required)
         .form-group.col-md
-          input#email.form-control(style="width: 100%" type="email" v-model="form.email" placeholder="Email" required)
+          input.form-control(name="email" type="email" v-model="form.email" placeholder="Email" required)
       .form-row
         .form-group.col-md
-          input#subject.form-control(type="text" v-model="form.subject" placeholder="Subject" required)
+          input.form-control(name="subject" type="text" v-model="form.subject" placeholder="Subject" required)
       .form-row
         .form-group.col
-          textarea#message.form-control(type="text" v-model="form.message" placeholder="Message" required)
+          textarea.form-control(name="message" type="text" v-model="form.message" placeholder="Message" required)
       .form-row
         .col
           spinner-button.float-right(:disabled="isLoading || status === true" :isLoading="isLoading" :status="status")
