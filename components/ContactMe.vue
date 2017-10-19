@@ -13,7 +13,7 @@
           input.form-control(name="subject" type="text" v-model="form.subject" placeholder="Subject" required)
       .form-row
         .form-group.col
-          textarea.form-control(name="message" type="text" v-model="form.message" placeholder="Message" required)
+          textarea#message.form-control(name="message" type="text" v-model="form.message" placeholder="Message" required)
       .form-row
         .col
           spinner-button.float-right(:disabled="isLoading || status === true" :isLoading="isLoading" :status="status")
