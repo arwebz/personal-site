@@ -6,9 +6,9 @@
       input(type="hidden" name="to" v-model="form.to")
       .form-row
         .form-group.col-md
-          input.form-control(type="text" v-model="form.name" placeholder="Name" required)
+          input.form-control(name="name" type="text" v-model="form.name" placeholder="Name" required)
         .form-group.col-md
-          input.form-control(name="from" type="email" v-model="form.email" placeholder="Email" required)
+          input.form-control(name="email" type="email" v-model="form.email" placeholder="Email" required)
       .form-row
         .form-group.col-md
           input.form-control(name="subject" type="text" v-model="form.subject" placeholder="Subject" required)
@@ -51,8 +51,9 @@ export default {
     submissionPayload () {
       return {
         'form-name': this.formName,
-        from: `${this.form.name} <${this.form.email}>`,
         to: 'martin.frackerjr@gmail.com',
+        name: this.form.name,
+        email: this.form.email,
         subject: this.form.subject,
         text: this.form.text
       }
