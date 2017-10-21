@@ -3,8 +3,8 @@
     b-nav-item-dropdown.d-none.d-md-inline(:text="text")
       b-dropdown-item(v-for="link in linksSafe" :key="link.text" :href="link.href") {{link.text}}
     .d-md-none
-      b-nav-text.dropdown-toggle(@click="openMobileDropdown") {{text}}
-      .dropdown-content(ref="dropdown" :class="classes" :style="style")
+      b-nav-text.dropdown-toggle(@click="open = !open") {{text}}
+      .dropdown-content(ref="dropdown" :class="mobileClasses" :style="mobileStyle")
         b-nav-item.mobile-link(v-for="link in linksSafe" :key="link.text" :href="link.href") {{link.text}}
 </template>
 
@@ -13,31 +13,16 @@ export default {
   props: ['text', 'links'],
   data () {
     return {
-      open: false,
-      height: 0,
-      linksSafe: []
+      open: false
     }
-  },
-  mounted () {
-    this.linksSafe = (this.links != null)
-      ? this.links
-      : this.getLinksFromSlot()
   },
   computed: {
-    style () {
-      let height = `${this.height}px`
-      return {
-        'max-height': height
-      }
+    linksSafe () {
+      return this.links != null
+        ? this.links
+        : this.linksFromSlot
     },
-    classes () {
-      return {
-        'hidden-dropdown-content': !this.open
-      }
-    }
-  },
-  methods: {
-    getLinksFromSlot () {
+    linksFromSlot () {
       let result = []
       let children = this.$slots.default
       for (let i = 0; i < children.length; i++) {
@@ -51,17 +36,28 @@ export default {
       }
       return result
     },
-    openMobileDropdown () {
-      this.open = !this.open
-      if (this.open) {
-        let height = 0
-        let children = this.$refs.dropdown.children
-        for (let i = 0; i < children.length; ++i) {
-          height += children.item(i).clientHeight
-        }
-        this.height = height
-      } else {
-        this.height = 0
+    mobileStyle () {
+      let height = `${this.mobileDropdownHeight}px`
+      return {
+        'max-height': height
+      }
+    },
+    mobileDropdownHeight () {
+      return this.open
+        ? this.contentHeight
+        : 0
+    },
+    contentHeight () {
+      let height = 0
+      let children = this.$refs.dropdown.children
+      for (let i = 0; i < children.length; ++i) {
+        height += children.item(i).clientHeight
+      }
+      return height
+    },
+    mobileClasses () {
+      return {
+        'hidden-dropdown-content': !this.open
       }
     }
   }
