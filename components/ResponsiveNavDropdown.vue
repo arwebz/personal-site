@@ -3,7 +3,7 @@
     b-nav-item-dropdown.d-none.d-md-inline(:text="text")
       b-dropdown-item(v-for="link in linksSafe" :key="link.text" :href="link.href") {{link.text}}
     .d-md-none
-      b-nav-text.dropdown-toggle(@click="open = !open") {{text}}
+      b-nav-text.dropdown-toggle(@click="open = !open" style="width: 100%;") {{text}}
       .dropdown-content(ref="dropdown" :class="mobileClasses" :style="mobileStyle")
         b-nav-item.mobile-link(v-for="link in linksSafe" :key="link.text" :href="link.href") {{link.text}}
 </template>
