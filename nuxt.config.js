@@ -14,11 +14,15 @@ module.exports = {
     emailUser: process.env.EMAIL_USER
   },
   modules: [
-    '@nuxtjs/font-awesome'
+    '@nuxtjs/font-awesome',
+    '@nuxtjs/axios',
+    'nuxtent'
   ],
   plugins: [
     '~/plugins/buefy',
-    '~/plugins/page'
+    '~/plugins/page',
+    '~/plugins/prism',
+    '~/plugins/styles'
   ],
   loading: { color: '#77dd77', height: '5px' },
   router: {
@@ -34,6 +38,7 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+        config.devtool = 'source-map'
       }
     },
     postcss: {
