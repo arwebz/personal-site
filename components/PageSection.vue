@@ -1,5 +1,5 @@
 <template lang="pug">
-  #page-section(:style="style")
+  .hero#page-section(:style="style")
     .container
       .title(v-if="title != null") {{ title }}
       slot

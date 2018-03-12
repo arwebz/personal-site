@@ -1,6 +1,7 @@
 <template lang="pug">
   div
-    page-section(title="Software Developer")
+    hero-section(title="Martin Fracker, Jr." subtitle="Web Developer")
+    page-section
       about-me
     page-section(color="#e3fdff")
       skills
@@ -11,12 +12,14 @@
 <script>
 import AboutMe from '~/components/AboutMe'
 import ContactMe from '~/components/ContactMe'
+import HeroSection from '~/components/HeroSection'
 import PageSection from '~/components/PageSection'
 import Skills from '~/components/Skills'
 export default {
   components: {
     AboutMe,
     ContactMe,
+    HeroSection,
     PageSection,
     Skills
   }
