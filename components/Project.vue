@@ -1,13 +1,18 @@
 <template lang="pug">
-  b-card(:title="name" :sub-title="time" bg-variant="light")
-    p.card-text
+  #project
+    hero-section(:title="name" :subtitle="time" type="is-default")
       slot
-    div(slot="footer" v-if="link != null")
-      a.text-muted(:href="link") {{ linkDisplay }}
+      p.link
+        a(v-if="link != null" :href="link") {{ linkDisplay }}
 </template>
 
 <script>
+import HeroSection from '~/components/HeroSection'
+
 export default {
+  components: {
+    HeroSection
+  },
   props: ['name', 'time', 'link', 'internal', 'github', 'client', 'linkText'],
   computed: {
     linkDisplay () {
@@ -26,7 +31,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-  a {
-    text-decoration: none;
-  }
+.link {
+  padding-top: 10px;
+}
 </style>
