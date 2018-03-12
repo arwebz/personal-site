@@ -17,7 +17,7 @@ module.exports = {
     emailUser: process.env.EMAIL_USER
   },
   modules: [
-    '@nuxtjs/bootstrap-vue',
+    '@nuxtjs/bulma',
     '@nuxtjs/font-awesome'
   ],
   /*
@@ -32,13 +32,19 @@ module.exports = {
     ** Run ESLint on save
     */
     extend (config, ctx) {
-      if (ctx.dev && ctx.isClient) {
+      if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+      }
+    },
+
+    postcss: {
+      plugins: {
+        'postcss-custom-properties': false
       }
     }
   }
