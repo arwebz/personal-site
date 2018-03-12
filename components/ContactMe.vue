@@ -61,7 +61,7 @@ export default {
       this.isLoading = true
       axios.post(this.action, formData).then(() => {
         this.isLoading = false
-        this.status = false
+        this.status = true
         this.showSuccess()
       }).catch(() => {
         this.status = false
