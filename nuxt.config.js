@@ -1,7 +1,4 @@
 module.exports = {
-  /*
-  ** Headers of the page
-  */
   head: {
     title: 'Martin Fracker, Jr.',
     meta: [
@@ -17,20 +14,16 @@ module.exports = {
     emailUser: process.env.EMAIL_USER
   },
   modules: [
-    '@nuxtjs/bulma',
     '@nuxtjs/font-awesome'
   ],
-  /*
-  ** Customize the progress bar color
-  */
+  plugins: [
+    '~/plugins/buefy'
+  ],
   loading: { color: '#3B8070' },
-  /*
-  ** Build configuration
-  */
+  router: {
+    linkExactActiveClass: 'is-active'
+  },
   build: {
-    /*
-    ** Run ESLint on save
-    */
     extend (config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
@@ -41,7 +34,6 @@ module.exports = {
         })
       }
     },
-
     postcss: {
       plugins: {
         'postcss-custom-properties': false

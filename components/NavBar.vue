@@ -1,41 +1,36 @@
 <template lang="pug">
-  b-navbar(toggleable="md" type="light" variant="light")
-    b-navbar-brand(href="javascript:void(0)") Martin Fracker, Jr.
-    b-nav-toggle(target="nav_collapse")
-    b-collapse(is-nav id="nav_collapse")
-      b-nav(is-nav-bar)
-        b-nav-item(to="/" :exact="true") Home
-        b-nav-item(to="/projects") Projects
-        responsive-nav-dropdown(text="Resume")
-          a(href="https://github.com/Towerism/resume/raw/master/fracker-martin-resume.pdf") PDF
-          a(href="https://github.com/Towerism/resume/raw/master/fracker-martin-resume.txt") Text
-        b-nav-item(href="http://www.github.com/towerism") Github
+  .navbar.is-light(role="navigation" aria-label="main navigation")
+    .navbar-brand
+      a.navbar-item(to="/") Martin Fracker, Jr.
+      .navbar-burger(@click="clickBurger" :class="{ 'is-active': isMobileMenuActive }")
+        span
+        span
+        span
+    .navbar-menu(:class="{ 'is-active': isMobileMenuActive }")
+      .navbar-start
+        nuxt-link.navbar-item(to="/" :exact="true") Home
+        nuxt-link.navbar-item(to="/projects") Projects
+        .navbar-item.has-dropdown.is-hoverable
+          a.navbar-link Resume
+          .navbar-dropdown.is-info
+            a.navbar-item(href="https://github.com/Towerism/resume/raw/master/fracker-martin-resume.pdf") PDF
+            a.navbar-item(href="https://github.com/Towerism/resume/raw/master/fracker-martin-resume.txt" target="_blank") Text
+        a.navbar-item(href="http://www.github.com/towerism" target="_blank") Github
+      .navbar-end
 </template>
 
 <script>
-import ResponsiveNavDropdown from './ResponsiveNavDropdown'
 
 export default {
-  components: {
-    ResponsiveNavDropdown
+  data () {
+    return {
+      isMobileMenuActive: false
+    }
+  },
+  methods: {
+    clickBurger () {
+      this.isMobileMenuActive = !this.isMobileMenuActive
+    }
   }
 }
 </script>
-
-
-<style lang="css" scoped>
-  .dropdown-toggle {
-    cursor: pointer;
-  }
-  .mobile-resume-link {
-    padding-left: 25px;
-  }
-  .dropdown-content {
-    height: auto;
-    transition: max-height .5s;
-    overflow: hidden;
-  }
-  .hidden-dropdown-content {
-    max-height: 0;
-  }
-</style>
