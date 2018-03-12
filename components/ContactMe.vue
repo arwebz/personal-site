@@ -4,21 +4,14 @@
     form(@submit.prevent="onSubmit" :action="action" :name="formName" netlify)
       input(type="hidden" v-model="honeypot")
       input(type="hidden" name="to" v-model="form.to")
-      .form-row
-        .form-group.col-md
-          input.form-control(name="name" type="text" v-model="form.name" placeholder="Name" required)
-        .form-group.col-md
-          input.form-control(name="email" type="email" v-model="form.email" placeholder="Email" required)
-      .form-row
-        .form-group.col-md
-          input.form-control(name="subject" type="text" v-model="form.subject" placeholder="Subject" required)
-      .form-row
-        .form-group.col
-          textarea#message.form-control(name="text" type="text" v-model="form.text" placeholder="Message" required)
-      .form-row
-        .col
-          spinner-button.float-right(:disabled="isLoading || status === true" :isLoading="isLoading" :status="status")
-            span Submit
+      b-field(label="From" horizontal)
+        b-input.form-control(name="name" type="text" v-model="form.name" placeholder="Name" required)
+        b-input.form-control(name="email" type="email" v-model="form.email" placeholder="Email" required)
+      b-field(label="Subject" horizontal)
+        b-input.form-control(name="subject" type="text" v-model="form.subject" placeholder="Subject" required)
+      b-field(label="Message" horizontal)
+        b-input#message.form-control(type="textarea" name="text" v-model="form.text" placeholder="Message" required)
+      spinner-button.is-pulled-right(:disabled="isLoading || status === true" :isLoading="isLoading" :status="status") Submit
 </template>
 
 <script>
@@ -69,9 +62,29 @@ export default {
       axios.post(this.action, formData).then(() => {
         this.isLoading = false
         this.status = true
+        this.showSuccess()
       }).catch(() => {
         this.status = false
+        this.showWarning()
         setTimeout(() => { this.status = '' }, 2000)
+      })
+    },
+    showSuccess () {
+      this.$snackbar.open({
+        message: 'Thank you for your message!',
+        type: 'is-success',
+        position: 'is-top'
+      })
+    },
+    showWarning () {
+      this.$snackbar.open({
+        message: 'Your message failed to send!',
+        type: 'is-warning',
+        position: 'is-top',
+        actionText: 'Retry',
+        onAction: () => {
+          this.onSubmit()
+        }
       })
     }
   }
