@@ -1,5 +1,5 @@
 <template lang="pug">
-  div#social-media-button.text-center
+  div#social-media-button
     a(:href="link")
       i.fa.icon(:class="classes")
 </template>
