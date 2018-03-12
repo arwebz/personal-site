@@ -1,14 +1,14 @@
 <template lang="pug">
   div
     p If you have any questions about my skills, any of the projects I have worked on, or would like to set up an interview, please send me an email using the form below.
-    form(@submit.prevent="onSubmit" :action="action" :name="formName" netlify)
+    form#contact-form(@submit.prevent="onSubmit" :action="action" :name="formName" netlify)
       input(type="hidden" v-model="honeypot")
       input(type="hidden" name="to" v-model="form.to")
       b-field(label="From" horizontal)
-        b-input.form-control(name="name" type="text" v-model="form.name" placeholder="Name" required)
-        b-input.form-control(name="email" type="email" v-model="form.email" placeholder="Email" required)
+        b-input.form-control(name="name" icon-pack="fa" icon="user" type="text" v-model="form.name" placeholder="Name" required)
+        b-input.form-control(name="email" icon-pack="fa" icon="envelope" type="email" v-model="form.email" placeholder="Email" required)
       b-field(label="Subject" horizontal)
-        b-input.form-control(name="subject" type="text" v-model="form.subject" placeholder="Subject" required)
+        b-input.form-control(name="subject" icon-pack="fa" icon="pencil" type="text" v-model="form.subject" placeholder="Subject" required)
       b-field(label="Message" horizontal)
         b-input#message.form-control(type="textarea" name="text" v-model="form.text" placeholder="Message" required)
       spinner-button.is-pulled-right(:disabled="isLoading || status === true" :isLoading="isLoading" :status="status") Submit
@@ -61,7 +61,7 @@ export default {
       this.isLoading = true
       axios.post(this.action, formData).then(() => {
         this.isLoading = false
-        this.status = true
+        this.status = false
         this.showSuccess()
       }).catch(() => {
         this.status = false
@@ -92,6 +92,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
+#contact-form {
+  margin-top: 30px;
+}
 #message {
   height: 12em;
 }

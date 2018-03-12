@@ -6,7 +6,18 @@
     <span class="icon is-small has-text-white" v-else-if="showCross">
       <i class="fa fa-times"></i>
     </span>
-    <slot v-if="showSlot"></slot>
+    <span class="icon is-small has-text-white" v-else>
+      <i class="fa fa-paper-plane"></i>
+    </span>
+    <span v-if="showSlot">
+      <slot></slot>
+    </span>
+    <span v-else-if="isSuccess">
+      Success!
+    </span>
+    <span v-else>
+      Failure!
+    </span>
   </button>
 </template>
 
