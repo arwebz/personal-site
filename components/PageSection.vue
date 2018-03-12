@@ -1,7 +1,7 @@
 <template lang="pug">
-  div#page-section(:style="style")
-    b-container
-      h2.title(v-if="title != null") {{ title }}
+  #page-section(:style="style")
+    .container
+      .title(v-if="title != null") {{ title }}
       slot
 </template>
 

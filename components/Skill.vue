@@ -1,8 +1,9 @@
 <template lang="pug">
-  div#skill.text-center
-    i.fa.icon(:class="classes")
-    h5.title {{ name }}
-    div.description.text-justify
+  #skill
+    p.has-text-centered
+      i.fa.myicon(:class="classes")
+    h4.title.is-4.has-text-centered {{ name }}
+    p.description.has-text-centered
       slot
 </template>
 
@@ -19,9 +20,8 @@ export default {
 
 <style lang="less" scoped>
 #skill {
-  .icon {
+  .myicon {
     font-size: 3.1em;
-    padding-bottom: 20px;
     color: #3aaabf;
   }
   .title {
