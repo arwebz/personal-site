@@ -2,7 +2,7 @@
   <div class="media is-mobile">
     <figure class="media-left">
       <p class="image is-128x128">
-        <img src="~/assets/img/profile.png">
+        <img src="~/assets/img/profile.jpeg">
       </p>
     </figure>
     <div class="media-content">
