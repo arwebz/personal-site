@@ -1,5 +1,5 @@
 <template>
-  <div class="media">
+  <div class="media is-mobile">
     <figure class="media-left">
       <p class="image is-128x128">
         <img src="~/assets/img/profile.png">
@@ -19,3 +19,10 @@
     </div>
   </div>
 </template>
+
+<style lang="less" scoped>
+.image {
+  border-radius: 50%;
+  overflow: hidden;
+}
+</style>

@@ -1,5 +1,5 @@
 <template lang="pug">
-  page-section.has-text-centered(color="#ffefd3")
+  page-section.is-danger.has-text-centered
     social-media-button.social(for="facebook")
     social-media-button.social(for="linkedin")
     social-media-button.social(for="github")

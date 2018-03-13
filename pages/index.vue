@@ -1,9 +1,8 @@
 <template lang="pug">
   div
-    hero-section(title="Martin Fracker, Jr." subtitle="Web Developer")
     page-section
       about-me
-    page-section(color="#e3fdff")
+    page-section.is-info
       skills
     page-section(title="Contact Me")
       contact-me
@@ -12,16 +11,20 @@
 <script>
 import AboutMe from '~/components/AboutMe'
 import ContactMe from '~/components/ContactMe'
-import HeroSection from '~/components/HeroSection'
 import PageSection from '~/components/PageSection'
 import Skills from '~/components/Skills'
 export default {
   components: {
     AboutMe,
     ContactMe,
-    HeroSection,
     PageSection,
     Skills
+  },
+  mounted () {
+    this.setPageInfo({
+      title: 'Martin Fracker, Jr.',
+      subtitle: 'Web Developer'
+    })
   }
 }
 </script>

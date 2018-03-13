@@ -1,8 +1,8 @@
 <template lang="pug">
   #skill
     p.has-text-centered
-      i.fa.myicon(:class="classes")
-    h4.title.is-4.has-text-centered {{ name }}
+      b-icon.title(pack="fa" is-large :icon="icon")
+    h4.subtitle.is-4.has-text-centered {{ name }}
     p.description.has-text-centered
       slot
 </template>
@@ -23,9 +23,6 @@ export default {
   .myicon {
     font-size: 3.1em;
     color: #3aaabf;
-  }
-  .title {
-    color: #85afc0;
   }
 }
 </style>

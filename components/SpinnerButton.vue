@@ -37,7 +37,7 @@ export default {
   computed: {
     buttonClasses () {
       return {
-        'is-primary': !this.isSuccess && this.emptyStatus,
+        'is-info': !this.isSuccess && this.emptyStatus,
         'is-danger': !this.isSuccess && !this.emptyStatus,
         'is-success': this.isSuccess,
         'is-loading': this.isLoading

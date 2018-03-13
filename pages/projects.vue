@@ -1,6 +1,5 @@
 <template>
   <div>
-    <hero-section title="Projects" subtitle="The best thing about starting a new project is the satisfaction I get from learning something new." />
     <project name="ARM Lenda" time="June 2016 to Present" link="http://www.armlend.com" client="Ag Resource Management">
       Currently working in a team of six developers to develop a management
       operations web application for a company which provides risk management
@@ -49,14 +48,24 @@
 </template>
 
 <script>
-import HeroSection from '~/components/HeroSection'
-import PageSection from '~/components/PageSection'
+import Coding from '~/assets/img/coding.jpeg'
 import Project from '~/components/Project'
 export default {
   components: {
-    HeroSection,
-    PageSection,
     Project
+  },
+  data () {
+    return {
+      heroBackground: Coding
+    }
+  },
+  mounted () {
+    this.setPageInfo({
+      title: 'Projects',
+      subtitle: 'The best thing about starting a new project is the satisfaction I get from learning something new.',
+      image: this.heroBackground,
+      heroType: 'is-dark'
+    })
   }
 }
 </script>

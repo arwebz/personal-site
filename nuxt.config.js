@@ -17,11 +17,13 @@ module.exports = {
     '@nuxtjs/font-awesome'
   ],
   plugins: [
-    '~/plugins/buefy'
+    '~/plugins/buefy',
+    '~/plugins/page'
   ],
-  loading: { color: '#3B8070' },
+  loading: { color: '#77dd77', height: '5px' },
   router: {
-    linkExactActiveClass: 'is-active'
+    linkExactActiveClass: 'is-active',
+    middleware: 'page'
   },
   build: {
     extend (config, ctx) {

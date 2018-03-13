@@ -1,7 +1,7 @@
 <template lang="pug">
   div#social-media-button
-    a(:href="link")
-      i.fa.icon(:class="classes")
+    a.link(:href="link")
+      b-icon(@click="go(link)" custom-size="fa-4x" pack="fa" :icon="icon" type="is-default")
 </template>
 
 <script>
@@ -9,15 +9,15 @@ import _ from 'lodash'
 
 const sites = {
   facebook: {
-    classes: ['fa-facebook-square', 'facebook'],
+    icon: 'facebook-square',
     link: 'https://www.facebook.com/martin.fracker'
   },
   linkedin: {
-    classes: ['fa-linkedin-square', 'linkedin'],
+    icon: 'linkedin-square',
     link: 'https://www.linkedin.com/in/martinfrackerjr/'
   },
   github: {
-    classes: ['fa-github-square', 'github'],
+    icon: 'github-square',
     link: 'https://www.github.com/towerism'
   }
 }
@@ -41,31 +41,27 @@ export default {
     site () {
       return sites[this.for]
     },
-    classes () {
-      return this.site.classes
+    icon () {
+      return this.site.icon
     },
     link () {
       return this.site.link
+    }
+  },
+  methods: {
+    go (link) {
+      window.open(link)
     }
   }
 }
 </script>
 
 <style lang="less" scoped>
-@padding: 25px;
+@padding: 40px;
 #social-media-button {
   padding: 0 @padding 0 @padding;
-  .icon {
-    font-size: 3em;
-  }
-  .facebook {
-    color: #3b5998;
-  }
-  .linkedin {
-    color: #0077b5;
-  }
-  .github {
-    color: black;
-  }
+}
+.link {
+  color: inherit;
 }
 </style>

@@ -1,17 +1,17 @@
 <template lang="pug">
   #project
-    hero-section(:title="name" :subtitle="time" type="is-default")
+    page-section(:title="name" :subtitle="time" type="is-default")
       slot
       p.link
         a(v-if="link != null" :href="link") {{ linkDisplay }}
 </template>
 
 <script>
-import HeroSection from '~/components/HeroSection'
+import PageSection from '~/components/PageSection'
 
 export default {
   components: {
-    HeroSection
+    PageSection
   },
   props: ['name', 'time', 'link', 'internal', 'github', 'client', 'linkText'],
   computed: {
