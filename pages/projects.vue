@@ -10,7 +10,7 @@
       Angular.js to Vue.js. Since the product's release, ARM has closed more
       than a half-billion dollars worth of loans.
     </project>
-    <project name="Morphling" time="Jan 2017 to April 2017" link="https://github.com/Towerism/csce438-hw4" github>
+    <project name="Morphling" time="Jan 2017 to April 2017" link="https://github.com/Towerism/morphling" github>
       Worked in a group of three to develop a generalized board game server in
       order to facilitate a wide variety of games between two players without
       duplicating a lot of the server boilerplate. My role was to create a
@@ -30,7 +30,7 @@
       RavenDB, and Twitter Bootstrap, my role was that of a full stack
       developer.
     </project>
-    <project name="High Noon" time="Feb 2016 to Apr 2016" link="https://github.com/gwydirsam/DickGrayson" github>
+    <project name="High Noon" time="Feb 2016 to Apr 2016">
       Worked in a team of seven students to put together a game of reaction time
       that could be played by two people on the same iOS device. My role was to
       coordinate graphics and user interface design as well as to oversee
@@ -41,7 +41,7 @@
       Using agile scrum and test-driven development, a small team including me
       developed a security suite for encrypting and decrypting files, cracking
       encrypted files, and hiding and retrieving data using image and audio
-      steganography. My roll was to implement image and audio steganography to
+      steganography. My role was to implement image and audio steganography to
       hide data.
     </project>
   </div>
