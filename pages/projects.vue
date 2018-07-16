@@ -1,14 +1,18 @@
 <template>
   <div>
-    <project name="ARM Lenda" time="June 2016 to Present" link="http://www.armlend.com" client="Ag Resource Management">
-      Currently working in a team of six developers to develop a management
+    <project name="ARM Lenda" time="June 2016 to July 2018" link="http://www.armlend.com" client="Ag Resource Management">
+      Worked in a cross-functional scrum team to develop a management
       operations web application for a company which provides risk management
-      solutions for agribusiness. Using the Agile Scrum methodology and
-      technologies such as Vue.js, Angular.js, ASP.NET Web API, Jasmine, Twitter
-      Bootstrap, Highway Data, altogether my role has been that of a full stack
-      developer. The front-end is currently going through a major rewrite from
-      Angular.js to Vue.js. Since the product's release, ARM has closed more
-      than a half-billion dollars worth of loans.
+      solutions for agribusiness. Within the first year in production, closed
+      more than a half-billion dollars’ worth of loans. Set up continuous
+      delivery using Jenkin and Azure, later using Visual Studio Team Services,
+      allowing my team to deploy multiple times per week. Interested in
+      upgrading the tech stack, team looked into Vue.js, Angular, .NET core,
+      and Docker. Using the Agile Scrum methodology together with test-driven
+      development and technologies such as AngularJS, Vue.js, Angular, ASP.NET
+      Web API, .NET Core, Jasmine, Jenkins, Azure, Visual Studio Team Services,
+      Docker, Selenium, Protractor.NET, Twitter Bootstrap, and Entity
+      Framework, my role was that of a full stack developer.
     </project>
     <project name="Morphling" time="Jan 2017 to April 2017" link="https://github.com/Towerism/morphling" github>
       Worked in a group of three to develop a generalized board game server in
