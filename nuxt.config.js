@@ -41,5 +41,10 @@ module.exports = {
         'postcss-custom-properties': false
       }
     }
+  },
+  watchers: {
+    webpack: {
+      poll: true
+    }
   }
 }
