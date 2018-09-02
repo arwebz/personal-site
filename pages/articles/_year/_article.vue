@@ -1,13 +1,14 @@
 <template lang="pug">
   page-section
     .content
-      div#date {{article.date}}
+      div.has-text-grey-light {{articleDate}}
       h2#title {{article.title}} 
       nuxtent-body(:body="article.body")
 </template>
 
 <script>
 import PageSection from '~/components/PageSection'
+import moment from 'moment'
 export default {
   components: {
     PageSection
@@ -18,18 +19,14 @@ export default {
     }
   },
   computed: {
-    articleDate() {
-
+    articleDate () {
+      return moment(this.article.date, 'YYYY-MM-DD').format('LL')
     }
   }
 }
 </script>
 
 <style lang="less" scoped>
-#date {
-  color: #ccc;
-  font-weight: 500;
-}
 
 #title {
   margin-top: 0;
