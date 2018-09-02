@@ -21,7 +21,10 @@ export default {
     Skills
   },
   async fetch ({ store, app }) {
-    await store.dispatch('skills/fetchAll', app.$content)
+    await Promise.all([
+      store.dispatch('skills/fetchAll', app.$content),
+      store.dispatch('misc/fetchAll', app.$content)
+    ])
   },
   mounted () {
     this.setPageInfo({

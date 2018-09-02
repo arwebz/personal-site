@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    p If you have any questions about my skills, any of the projects I have worked on, or would like to set up an interview, please send me an email using the form below.
+    nuxtent-body(:body="contactMe.body")
     form#contact-form(@submit.prevent="onSubmit" :action="action" :name="formName" netlify)
       input(type="hidden" v-model="honeypot")
       input(type="hidden" name="to" v-model="form.to")
@@ -17,6 +17,7 @@
 <script>
 import axios from 'axios'
 import querystring from 'qs'
+import { mapGetters } from 'vuex'
 
 import PageSection from '~/components/PageSection.vue'
 import SpinnerButton from '~/components/SpinnerButton.vue'
@@ -50,6 +51,12 @@ export default {
         subject: this.form.subject,
         text: this.form.text
       }
+    },
+    ...mapGetters({
+      get: 'misc/get'
+    }),
+    contactMe () {
+      return this.get('contact-me')
     }
   },
   methods: {

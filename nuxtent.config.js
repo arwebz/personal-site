@@ -18,6 +18,11 @@ module.exports = {
       permalink: ':slug',
       isPost: false,
       generate: ['getAll']
+    }],
+    ['misc', {
+      permalink: ':slug',
+      isPost: false,
+      generage: ['getAll']
     }]
   ],
   parsers: {
