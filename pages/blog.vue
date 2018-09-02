@@ -9,7 +9,7 @@
 export default {
   async asyncData ({ app, route }) {
     return {
-      posts: await app.$content('/content-api/articles').getAll()
+      posts: await app.$content('/articles').getAll()
     }
   }
 }

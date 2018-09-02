@@ -14,7 +14,7 @@ export default {
   },
   async asyncData ({ app, params }) {
     return {
-      article: await app.$content('content-api/articles').get(`${params.year}/${params.article}`)
+      article: await app.$content('/articles').get(`${params.year}/${params.article}`)
     }
   }
 }

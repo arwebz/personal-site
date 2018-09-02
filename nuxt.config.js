@@ -1,3 +1,10 @@
+const axiosDev = {
+  baseURL: 'http://localhost:3000',
+}
+const axiosProd = {
+  baseURL: 'https://www.martinfrackerjr.com'
+}
+
 module.exports = {
   head: {
     title: 'Martin Fracker, Jr.',
@@ -15,7 +22,6 @@ module.exports = {
   },
   modules: [
     '@nuxtjs/font-awesome',
-    '@nuxtjs/axios',
     'nuxtent'
   ],
   plugins: [
