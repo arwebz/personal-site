@@ -155,4 +155,6 @@ mediocre code in order to make it clean.
 
 -------
 
-I left out the class definition to keep this post brief. You can find the class definition as well as the code in this post on Github.
+I left out the class definition to keep this post brief. You can find the class
+definition as well as the code in this post on
+[Github](https://github.com/Towerism/FrackCrypt/tree/develop/frackcrypt/tools/base64).

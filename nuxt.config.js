@@ -24,11 +24,13 @@ module.exports = {
     '@nuxtjs/font-awesome',
     'nuxtent'
   ],
+  css: [
+    'prismjs/themes/prism-tomorrow.css',
+    { src: '~/styles.less', lang: 'less' }
+  ],
   plugins: [
     '~/plugins/buefy',
-    '~/plugins/page',
-    '~/plugins/prism',
-    '~/plugins/styles'
+    '~/plugins/page'
   ],
   loading: { color: '#77dd77', height: '5px' },
   router: {
@@ -44,8 +46,8 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
-        config.devtool = 'source-map'
       }
+      config.devtool = 'source-map'
     },
     postcss: {
       plugins: {
