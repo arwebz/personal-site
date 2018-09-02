@@ -4,13 +4,16 @@ const externalLinks = require('markdown-it-link-attributes')
 
 module.exports = {
   content: [
-    [
-      'blog', {
-        page: '/blog/_year/_article',
-        permalink: ':year/:slug',
-        generate: ['get', 'getAll']
-      }
-    ]
+    ['blog', {
+      page: '/blog/_year/_article',
+      permalink: ':year/:slug',
+      generate: ['get', 'getAll']
+    }],
+    ['projects', {
+      permalink: ':slug',
+      isPost: false,
+      generate: ['getAll']
+    }]
   ],
   parsers: {
     md: {

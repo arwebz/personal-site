@@ -11,7 +11,7 @@ export default {
   components: {
     ArticleTeaser
   },
-  async asyncData ({ app, route }) {
+  async asyncData ({ app }) {
     return {
       articles: await app.$content('/blog').getAll()
     }

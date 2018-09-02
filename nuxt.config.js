@@ -48,7 +48,6 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-      config.devtool = 'source-map'
     },
     postcss: {
       plugins: {
