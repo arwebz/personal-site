@@ -35,6 +35,7 @@ module.exports = {
   loading: { color: '#77dd77', height: '5px' },
   router: {
     linkExactActiveClass: 'is-active',
+    linkActiveClass: 'is-active',
     middleware: 'page'
   },
   build: {

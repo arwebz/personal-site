@@ -1,5 +1,5 @@
 <template lang="pug">
-  page-section(:title="article.title" :subtitle="articleDate")
+  page-section
     nuxtent-body(:body="article.body")
     tags(:tags="article.tags")
 </template>
@@ -22,6 +22,13 @@ export default {
     articleDate () {
       return formatArticleDate(this.article)
     }
+  },
+  mounted () {
+    this.setPageInfo({
+      title: this.article.title,
+      subtitle: this.articleDate,
+      heroType: 'is-info'
+    })
   }
 }
 </script>
