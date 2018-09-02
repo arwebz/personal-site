@@ -13,6 +13,11 @@ module.exports = {
       permalink: ':slug',
       isPost: false,
       generate: ['getAll']
+    }],
+    ['skills', {
+      permalink: ':slug',
+      isPost: false,
+      generate: ['getAll']
     }]
   ],
   parsers: {
@@ -23,11 +28,13 @@ module.exports = {
           loadLanguages(['cpp'])
           return `<pre class="${cls}"><code class="${cls}">${Prism.highlight(code, Prism.languages[lang] || Prism.languages.markup)}</code></pre>`
         }
+        config.linkify = false
       },
       plugins: [
         [
           externalLinks,
           {
+            pattern: /^https:/,
             attrs: {
               target: '_blank',
               rel: 'noopener'

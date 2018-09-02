@@ -29,6 +29,7 @@ module.exports = {
     { src: '~/styles.less', lang: 'less' }
   ],
   plugins: [
+    '~/plugins/asyncComputed',
     '~/plugins/buefy',
     '~/plugins/page'
   ],

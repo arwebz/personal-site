@@ -27,7 +27,8 @@
     "nuxtent": "^1.4.1",
     "popper.js": "^1.12.9",
     "prismjs": "^1.15.0",
-    "qs": "^6.5.1"
+    "qs": "^6.5.1",
+    "vue-async-computed": "^3.4.1"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.77",

@@ -20,6 +20,9 @@ export default {
     PageSection,
     Skills
   },
+  async fetch ({ store, app }) {
+    await store.dispatch('skills/fetchAll', app.$content)
+  },
   mounted () {
     this.setPageInfo({
       title: 'Martin Fracker, Jr.',

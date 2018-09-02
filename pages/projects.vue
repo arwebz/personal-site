@@ -1,6 +1,6 @@
 <template lang="pug">
   #projects
-    project(v-for="project in projects" :key="project.title" :project="project")
+    project(v-for="project in projects" :key="project.slug" :project="project")
 </template>
 
 

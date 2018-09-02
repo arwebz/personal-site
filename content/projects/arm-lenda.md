@@ -4,7 +4,7 @@ start: '2016-06'
 end: '2018-07'
 client: 
   name: Ag Resource Management
-  link: http://www.armlend.com
+  link: https://www.armlend.com
 ---
 
 Worked in a cross-functional scrum team to develop a management operations web
