@@ -1,6 +1,6 @@
 import moment from 'moment'
 
-const IN_FORMAT = 'YYYY-MM-DD'
+const IN_FORMAT = 'YYYY-MM'
 const OUT_FORMAT = 'MMMM YYYY'
 
 export function formatProjectDate (project) {

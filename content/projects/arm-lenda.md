@@ -1,7 +1,7 @@
 ---
 title: ARM Lenda
-start: '2016-06-01'
-end: '2018-07-01'
+start: '2016-06'
+end: '2018-07'
 client: 
   name: Ag Resource Management
   link: http://www.armlend.com

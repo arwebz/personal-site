@@ -1,7 +1,7 @@
 ---
 title: Scalable Chat Room
-start: '2016-01-01'
-end: '2016-04-01'
+start: '2016-01'
+end: '2016-04'
 github:
   link: https://github.com/Towerism/csce438-hw4
 ---

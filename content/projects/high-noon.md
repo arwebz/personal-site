@@ -1,7 +1,7 @@
 ---
 title: High Noon
-start: '2016-02-01'
-end: '2016-04-01'
+start: '2016-02'
+end: '2016-04'
 ---
 
 Configured, designed, and developed the initial iteration of a web application
