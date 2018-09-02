@@ -1,5 +1,16 @@
 ---
 title: Programming is Like Writing Prose
+excerpt:
+  > 
+  Programming can be an artful craft. Last summer I read a book called Clean
+  Code: A Handbook of Agile Software Craftsmanship by Robert C. Martin. Martin
+  talks about the ways to improve old code as well as how to write new, readable,
+  maintainable code using test-driven development (TDD). He likens programming to
+  composition. You wouldn't pass off your rough draft as the final draft would
+  you?
+tags:
+  - c++
+  - clean code
 ---
 
 Programming can be an artful craft. Last summer I read a book called Clean
