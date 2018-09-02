@@ -16,6 +16,11 @@ export default {
     return {
       article: await app.$content('/articles').get(`${params.year}/${params.article}`)
     }
+  },
+  computed: {
+    articleDate() {
+
+    }
   }
 }
 </script>
