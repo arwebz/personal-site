@@ -19,7 +19,6 @@
         .navbar-end
           nuxt-link.navbar-item(to="/" :exact="true") Home
           nuxt-link.navbar-item(to="/projects") Projects
-          nuxt-link.navbar-item(to="/blog") Blog
 </template>
 
 <script>
