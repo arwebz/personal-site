@@ -1,15 +1,15 @@
 <template lang="pug">
   #skill
     p.has-text-centered
-      b-icon.title(pack="fa" is-large :icon="icon")
-    h4.subtitle.is-4.has-text-centered {{ name }}
+      b-icon.title(pack="fa" is-large :icon="skill.icon")
+    h4.subtitle.is-4.has-text-centered {{ skill.title }}
     p.description.has-text-centered
-      slot
+      nuxtent-body(:body="skill.body")
 </template>
 
 <script>
 export default {
-  props: ['name', 'icon'],
+  props: ['skill'],
   computed: {
     classes () {
       return [`fa-${this.icon}`]

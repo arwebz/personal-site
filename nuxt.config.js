@@ -1,3 +1,10 @@
+const axiosDev = {
+  baseURL: 'http://localhost:3000',
+}
+const axiosProd = {
+  baseURL: 'https://www.martinfrackerjr.com'
+}
+
 module.exports = {
   head: {
     title: 'Martin Fracker, Jr.',
@@ -14,15 +21,22 @@ module.exports = {
     emailUser: process.env.EMAIL_USER
   },
   modules: [
-    '@nuxtjs/font-awesome'
+    '@nuxtjs/font-awesome',
+    'nuxtent'
+  ],
+  css: [
+    'prismjs/themes/prism-tomorrow.css',
+    { src: '~/styles.less', lang: 'less' }
   ],
   plugins: [
+    '~/plugins/asyncComputed',
     '~/plugins/buefy',
     '~/plugins/page'
   ],
   loading: { color: '#77dd77', height: '5px' },
   router: {
     linkExactActiveClass: 'is-active',
+    linkActiveClass: 'is-active',
     middleware: 'page'
   },
   build: {

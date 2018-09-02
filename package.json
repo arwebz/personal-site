@@ -5,7 +5,7 @@
   "author": "Martin Fracker <martin.frackerjr@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt --spa",
+    "dev": "node --inspect=0.0.0.0:5858 node_modules/.bin/nuxt --spa",
     "build": "nuxt build --spa",
     "start": "nuxt start --spa",
     "generate": "nuxt generate",
@@ -13,6 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/axios": "4.5.2",
     "@nuxtjs/font-awesome": "^1.0.3",
     "axios": "^0.18.0",
     "bootstrap": "^4.0.0",
@@ -20,9 +21,14 @@
     "buefy": "^0.6.3",
     "jquery": "^3.3.1",
     "lodash": "^4.17.4",
+    "markdown-it-link-attributes": "^2.1.0",
+    "moment": "^2.22.2",
     "nuxt": "^1.4.0",
+    "nuxtent": "^1.4.1",
     "popper.js": "^1.12.9",
-    "qs": "^6.5.1"
+    "prismjs": "^1.15.0",
+    "qs": "^6.5.1",
+    "vue-async-computed": "^3.4.1"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.77",

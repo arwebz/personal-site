@@ -30,7 +30,8 @@ export default {
       return {
         'background-image': `url("${this.pageImage}")`,
         'background-size': 'cover',
-        'background-repeat': 'no-repeat'
+        'background-repeat': 'no-repeat',
+        'background-position': 'center center'
       }
     }
   }
