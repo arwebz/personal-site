@@ -2,7 +2,7 @@
   .container
     .navbar(role="navigation" aria-label="main navigation")
       .navbar-brand
-        a.navbar-item(to="/") Martin Fracker, Jr.
+        nuxt-link.navbar-item(to="/" active-class="" exact-active-class="") Martin Fracker, Jr.
         a.navbar-item(href="http://www.github.com/towerism" target="_blank")
           b-icon(pack="fa" icon="github")
         a.navbar-item(href="http://www.linkedin.com/in/martinfrackerjr" target="_blank")
