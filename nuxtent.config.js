@@ -22,7 +22,7 @@ module.exports = {
     ['misc', {
       permalink: ':slug',
       isPost: false,
-      generage: ['getAll']
+      generate: ['getAll']
     }]
   ],
   parsers: {
