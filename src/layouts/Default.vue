@@ -1,55 +1,28 @@
 <template lang="pug">
   #layout
-    nav.navbar.is-dark(role="navigation" aria-label="main navigation")
-      .container
-        .navbar-brand
-          nav-link.navbar-item(:to="{ name: 'home' }" :inactive="true")
-            | {{ $static.metaData.siteName }}
-          a.navbar-burger.burger(
-            role="button"
-            aria-label="menu"
-            aria-expanded="false"
-            @click="clickBurger"
-            :class="{ 'is-active': isMobileMenuActive }"
-          )
-            span(aria-hidden="true")
-            span(aria-hidden="true")
-            span(aria-hidden="true")
-        .navbar-menu(:class="{ 'is-active': isMobileMenuActive }")
-          .navbar-start
-          .navbar-end
-            nav-link.navbar-item(:to="{ name: 'home' }" :exact="true") Home
-            nav-link.navbar-item(:to="{ name: 'projects' }") Projects
+    PageHeader(
+      :title="title"
+      :subtitle="subtitle"
+      :type="headerType"
+      :image="headerImage"
+    )
+      div(slot="header")
+        nav-menu
     slot
     site-footer
 </template>
 
-<static-query>
-query {
-  metaData {
-    siteName
-  }
-}
-</static-query>
-
 <script>
-import NavLink from "~/components/NavLink";
+import NavMenu from "~/components/NavMenu";
 import SiteFooter from "~/components/SiteFooter";
+import PageHeader from "~/components/PageHeader";
 
 export default {
   components: {
-    NavLink,
+    NavMenu,
+    PageHeader,
     SiteFooter
   },
-  data() {
-    return {
-      isMobileMenuActive: false
-    };
-  },
-  methods: {
-    clickBurger() {
-      this.isMobileMenuActive = !this.isMobileMenuActive;
-    }
-  }
+  props: ["title", "subtitle", "headerType", "headerImage"]
 };
 </script>

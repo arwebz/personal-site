@@ -1,5 +1,10 @@
 <template lang="pug">
-  Layout
+  Layout(
+    title="Projects"
+    subtitle="The best thing about starting a new project is the satisfaction I get from learning something new."
+    header-type="is-dark"
+    header-image="/coding.jpeg"
+  )
     project(v-for="{ node } in projects" :key="node.id" :project="node")
 </template>
 

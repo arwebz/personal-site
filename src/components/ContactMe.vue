@@ -25,10 +25,10 @@
 <script>
 import axios from "axios";
 import querystring from "qs";
-import PageSection from "~/components/PageSection.vue";
+import SpinnerButton from "./SpinnerButton";
 export default {
   components: {
-    PageSection
+    SpinnerButton
   },
   data() {
     return {

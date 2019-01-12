@@ -1,9 +1,21 @@
 <template lang="pug">
-  Layout
+  Layout(
+    :title="$static.metaData.siteName"
+    subtitle="Web Developer"
+    header-type="is-primary"
+  )
     About
     Skills
     ContactMe
 </template>
+
+<static-query>
+query {
+  metaData {
+    siteName
+  }
+}
+</static-query>
 
 <script>
 import About from "~/components/About";
