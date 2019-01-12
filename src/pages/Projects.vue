@@ -40,5 +40,5 @@ export default {
       return orderBy(this.$page.projects.edges, "node.start", "desc");
     }
   }
-}
+};
 </script>

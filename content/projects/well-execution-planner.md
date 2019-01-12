@@ -1,8 +1,8 @@
 ---
 title: Well Execution Planner
-start: '2018-07'
-end: '2018-08'
-client: 
+start: "2018-07"
+end: "2018-08"
+client:
   name: Oil and Gas Company
 ---
 

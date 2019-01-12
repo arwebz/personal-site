@@ -8,14 +8,15 @@
 </template>
 
 <script>
-import { formatProjectDate } from "~/helpers/formatProjectDate"
+import { formatProjectDate } from "~/helpers/formatProjectDate";
 export default {
   props: ["project"],
   methods: {
     attachLinkText(obj, linkText) {
       return {
-        ...obj, linkText
-      }
+        ...obj,
+        linkText
+      };
     }
   },
   computed: {
@@ -23,31 +24,35 @@ export default {
       if (this.project.internal != null) {
         return this.attachLinkText(
           this.project.internal,
-          "Internal Application Development")
+          "Internal Application Development"
+        );
       } else if (this.project.github != null) {
         return this.attachLinkText(
           this.project.github,
-          "View the Repository on Github")
+          "View the Repository on Github"
+        );
       } else if (this.project.client != null) {
         return this.attachLinkText(
           this.project.client,
-          `Client: ${this.project.client.name}`)
+          `Client: ${this.project.client.name}`
+        );
       } else if (this.project.moreInfo != null) {
         return this.attachLinkText(
           this.project.moreInfo,
-          this.project.moreInfo.linkText)
+          this.project.moreInfo.linkText
+        );
       } else {
-        return null
+        return null;
       }
     },
     linkDisplay() {
-      return this.moreInfo.linkText
+      return this.moreInfo.linkText;
     },
     subtitle() {
-      return formatProjectDate(this.project)
+      return formatProjectDate(this.project);
     }
   }
-}
+};
 </script>
 
 <style lang="less" scoped>
