@@ -1,5 +1,6 @@
 <template lang="pug">
   Layout
+    h1.title Projects
     project(v-for="{ node } in projects" :key="node.id" :project="node")
 </template>
 

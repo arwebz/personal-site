@@ -1,7 +1,7 @@
 <template lang="pug">
-  #project
-    h3 {{project.title}}
-    h4 {{subtitle}}
+  #project.content
+    h3.title {{project.title}}
+    h6.has-text-grey.subtitle {{subtitle}}
     div(v-html="project.content")
     p.link
       a(v-if="moreInfo != null" :href="moreInfo.link") {{ linkDisplay }}

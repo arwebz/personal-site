@@ -1,5 +1,6 @@
-<template>
-  <div v-html="$static.about.content"></div>
+<template lang="pug">
+  PageSection
+    div(v-html="$static.about.content")
 </template>
 
 <static-query>

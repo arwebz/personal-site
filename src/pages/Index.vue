@@ -1,19 +1,16 @@
-<template>
-  <Layout>
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-
-    <h1>Hello, world!</h1>
-
-    <About />
-  </Layout>
+<template lang="pug">
+  Layout
+    About
+    Skills
 </template>
 
 <script>
 import About from "~/components/About";
+import Skills from "~/components/Skills";
 export default {
   components: {
-    About
+    About,
+    Skills
   }
 };
 </script>

@@ -1,16 +1,26 @@
-<template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link :to="{ name: 'home' }">{{ $static.metaData.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" :to="{ name: 'home' }">Home</g-link>
-        <g-link class="nav__link" :to="{ name: 'projects' }">Projects</g-link>
-      </nav>
-    </header>
-    <slot />
-  </div>
+<template lang="pug">
+  #layout
+    nav.navbar.is-dark(role="navigation" aria-label="main navigation")
+      .container
+        .navbar-brand
+          nav-link.navbar-item(:to="{ name: 'home' }" :inactive="true")
+            | {{ $static.metaData.siteName }}
+          a.navbar-burger.burger(
+            role="button"
+            aria-label="menu"
+            aria-expanded="false"
+            @click="clickBurger"
+            :class="{ 'is-active': isMobileMenuActive }"
+          )
+            span(aria-hidden="true")
+            span(aria-hidden="true")
+            span(aria-hidden="true")
+        .navbar-menu(:class="{ 'is-active': isMobileMenuActive }")
+          .navbar-start
+          .navbar-end
+            nav-link.navbar-item(:to="{ name: 'home' }" :exact="true") Home
+            nav-link.navbar-item(:to="{ name: 'projects' }") Projects
+    slot
 </template>
 
 <static-query>
@@ -21,31 +31,22 @@ query {
 }
 </static-query>
 
-<style>
-body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-}
+<script>
+import NavLink from "~/components/NavLink";
 
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
-}
-</style>
+export default {
+  components: {
+    NavLink
+  },
+  data() {
+    return {
+      isMobileMenuActive: false
+    };
+  },
+  methods: {
+    clickBurger() {
+      this.isMobileMenuActive = !this.isMobileMenuActive;
+    }
+  }
+};
+</script>
