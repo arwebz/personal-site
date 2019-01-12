@@ -1,5 +1,5 @@
 <template lang="pug">
-  #project.content
+  PageSection#project
     h3.title {{project.title}}
     h6.has-text-grey.subtitle {{subtitle}}
     div(v-html="project.content")
