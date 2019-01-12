@@ -21,6 +21,7 @@
             nav-link.navbar-item(:to="{ name: 'home' }" :exact="true") Home
             nav-link.navbar-item(:to="{ name: 'projects' }") Projects
     slot
+    site-footer
 </template>
 
 <static-query>
@@ -33,10 +34,12 @@ query {
 
 <script>
 import NavLink from "~/components/NavLink";
+import SiteFooter from "~/components/SiteFooter";
 
 export default {
   components: {
-    NavLink
+    NavLink,
+    SiteFooter
   },
   data() {
     return {
