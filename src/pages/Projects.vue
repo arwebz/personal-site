@@ -6,7 +6,7 @@
     header-image="/coding.jpeg"
   )
     project(v-for="{ node } in projects" :key="node.id" :project="node")
-</template>
+ </template>
 
 <page-query>
   query Projects {
@@ -36,6 +36,7 @@
 <script>
 import { orderBy } from "lodash";
 import Project from "~/components/Project";
+
 export default {
   components: {
     Project

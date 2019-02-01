@@ -17,8 +17,8 @@
       .navbar-menu(:class="{ 'is-active': isMobileMenuActive }")
         .navbar-start
         .navbar-end
-          nav-link.navbar-item(:to="{ name: 'home' }" :exact="true") Home
-          nav-link.navbar-item(:to="{ name: 'projects' }") Projects
+          nav-link.navbar-item(to="/" :exact="true") Home
+          nav-link.navbar-item(to="/projects") Projects
 </template>
 
 <static-query>

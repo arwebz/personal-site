@@ -1,4 +1,4 @@
-FROM node:9 as develop
+FROM node:10 as develop
 
 ENV HOST 0.0.0.0
 
