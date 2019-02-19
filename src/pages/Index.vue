@@ -4,9 +4,10 @@
     subtitle="Web Developer"
     header-type="is-primary"
   )
-    About
-    Skills
-    ContactMe
+    #home
+      About
+      Skills
+      ContactMe
 </template>
 
 <static-query>
