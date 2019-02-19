@@ -43,9 +43,6 @@ export default {
   },
   computed: {
     projects() {
-      if (!this.$page.projects) {
-        return [];
-      }
       return orderBy(this.$page.projects.edges, "node.start", "desc");
     }
   }
