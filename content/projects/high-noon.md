@@ -1,7 +1,7 @@
 ---
 title: High Noon
-start: '2016-02'
-end: '2016-04'
+start: "2016-02"
+end: "2016-04"
 ---
 
 Worked in a team of seven students to put together a game of reaction time that

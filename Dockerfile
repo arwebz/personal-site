@@ -1,4 +1,4 @@
-FROM node:9 as develop
+FROM node:10 as develop
 
 ENV HOST 0.0.0.0
 
@@ -10,12 +10,12 @@ RUN yarn
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 8080
 EXPOSE 5858
-CMD ["yarn", "dev"]
+CMD ["yarn", "develop"]
 
 FROM develop as build
-RUN yarn generate
+RUN yarn build
 
 FROM nginx:1.15 as static
 COPY --from=build /src/app/dist /usr/share/nginx/html

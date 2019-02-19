@@ -1,7 +1,6 @@
 ---
 title: Programming is Like Writing Prose
-excerpt:
-  > 
+excerpt: >
   Programming can be an artful craft. Last summer I read a book called Clean
   Code: A Handbook of Agile Software Craftsmanship by Robert C. Martin. Martin
   talks about the ways to improve old code as well as how to write new, readable,
@@ -164,7 +163,7 @@ revisions before becoming the code in the latter. Just as a writer must massage
 his rough draft to come up with a final draft, a programmer must massage his
 mediocre code in order to make it clean.
 
--------
+---
 
 I left out the class definition to keep this post brief. You can find the class
 definition as well as the code in this post on

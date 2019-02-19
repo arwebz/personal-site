@@ -1,8 +1,8 @@
 ---
 title: Social Media Application
-start: '2018-08'
-client: 
-    name: Social Media Company
+start: "2018-08"
+client:
+  name: Social Media Company
 ---
 
 Working with a client which provides a social media platform to its clients to
