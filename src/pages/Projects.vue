@@ -8,7 +8,7 @@
     project(v-if="" v-for="{ node } in projects" :key="node.id" :project="node")
  </template>
 
-<page-query>
+<static-query>
   query Projects {
     projects: allProject {
       edges {
@@ -31,7 +31,7 @@
       }
     }
   }
-</page-query>
+</static-query>
 
 <script>
 import { orderBy } from "lodash";
@@ -43,7 +43,7 @@ export default {
   },
   computed: {
     projects() {
-      return orderBy(this.$page.projects.edges, "node.start", "desc");
+      return orderBy(this.$static.projects.edges, "node.start", "desc");
     }
   }
 };
