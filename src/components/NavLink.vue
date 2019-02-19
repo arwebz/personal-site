@@ -1,5 +1,5 @@
 <template lang="pug">
-  g-link(:to="to" :exact="exact" :active-class="activeClass" exact-active-class="")
+  router-link(:to="to" :exact="exact" :active-class="activeClass" exact-active-class="")
     slot
 </template>
 
