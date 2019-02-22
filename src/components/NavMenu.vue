@@ -1,24 +1,18 @@
 <template lang="pug">
-  nav.navbar(role="navigation" aria-label="main navigation")
-    .container
-      .navbar-brand
-        nav-link.navbar-item(:to="{ name: 'home' }" :inactive="true")
-          | {{ $static.metaData.siteName }}
-        a.navbar-burger.burger(
-          role="button"
-          aria-label="menu"
-          aria-expanded="false"
-          @click="clickBurger"
-          :class="{ 'is-active': isMobileMenuActive }"
-        )
-          span(aria-hidden="true")
-          span(aria-hidden="true")
-          span(aria-hidden="true")
-      .navbar-menu(:class="{ 'is-active': isMobileMenuActive }")
-        .navbar-start
-        .navbar-end
-          nav-link.navbar-item(to="/" :exact="true") Home
-          nav-link.navbar-item(to="/projects") Projects
+  header#header
+    h1 {{$static.metaData.siteName}}
+    nav
+      ul
+        li
+          a(href='#intro' v-smooth-scroll) Intro
+        li
+          a(href='#one' v-smooth-scroll) What I Do
+        li
+          a(href='#two' v-smooth-scroll) Who I Am
+        li
+          a(href='#work' v-smooth-scroll) My Work
+        li
+          a(href='#contact' v-smooth-scroll) Contact
 </template>
 
 <static-query>
@@ -28,23 +22,3 @@ query {
   }
 }
 </static-query>
-
-<script>
-import NavLink from "./NavLink";
-
-export default {
-  components: {
-    NavLink
-  },
-  data() {
-    return {
-      isMobileMenuActive: false
-    };
-  },
-  methods: {
-    clickBurger() {
-      this.isMobileMenuActive = !this.isMobileMenuActive;
-    }
-  }
-};
-</script>

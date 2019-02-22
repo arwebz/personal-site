@@ -1,6 +1,8 @@
 // This is where project configuration and installed plugin options are located.
 // Learn more: https://gridsome.org/docs/config
 
+var path = require("path");
+
 module.exports = {
   siteName: "Martin Fracker, Jr.",
   siteDescription: "A software developer committed to lifelong learning.",
