@@ -18,9 +18,9 @@
         header
           h2 What I Do
         p
-          | Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-          | Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-          | id varius justo euismod in. Curabitur egestas consectetur magna.
+          | I along with my company, Improving, am bringing trust back into the consulting
+          | industry. As a software consultant I help various clients in the Houston
+          | area leverage their strategic advantage in the software I create for them.
       a.button.style2.down.anchored(href='#two' v-smooth-scroll) Next
     // Two
     section#two.main.style2.left.dark.fullscreen(v-in-viewport)
@@ -28,9 +28,14 @@
         header
           h2 Who I Am
         p
-          | Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-          | Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-          | id varius justo euismod in. Curabitur egestas consectetur magna.
+          | I am adaptable software development professional
+          | eager to push the boundaries of my knowledge of software
+          | development technologies and methods. I have a solid background in
+          | Computer Science, having graduated with a B.S. from Texas A&M
+          | University; and with 3+ years experience in Software Consulting, I am
+          | well-versed in several technology stacks. When I'm not poring over
+          | well-written documentation you can find me exercising, playing
+          | with my 3 cats, or spending time with my wife.
       a.button.style2.down.anchored(href='#work' v-smooth-scroll) Next
     // Work
     section#work.main.style3.primary.fullscreen
@@ -38,9 +43,9 @@
         header
           h2 My Work
           p
-            | Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-            | Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
-            | arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.
+            | My ability to learn new things and get up to speed quickly is
+            | demonstrated by the diversity of technologies used in the various
+            | projects I have been a part of.
         // Gallery
         modal.gallery-modal(name='anonymous_red' height='auto' transition='pop-out')
           .image.fit
@@ -93,7 +98,7 @@
       .content
         header#say-hello
           h2 Say Hello.
-          p Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+          p We as humans are stronger when we put our minds together, so let's connect!
         .box
           form(method='post', action='#')
             .fields

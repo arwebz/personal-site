@@ -73,6 +73,8 @@
 
 #intro {
   background: url("images/overlay.png"), url("/images/intro.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multipliy;
   background-size: 256px 256px, cover;
   background-attachment: fixed, fixed;
   background-position: top left, bottom center;
