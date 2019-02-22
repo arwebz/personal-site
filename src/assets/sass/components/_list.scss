@@ -16,6 +16,15 @@ ul {
     }
   }
 
+  &.tags {
+    li {
+      display: inline-block;
+      & + & {
+        margin: 0.5rem;
+      }
+    }
+  }
+
   &.menu {
     cursor: default;
 

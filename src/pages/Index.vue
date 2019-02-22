@@ -5,17 +5,11 @@
     section#intro.main.style1.dark.fullscreen(v-in-viewport)
       .content
         header
-          h2 Hey.
-        p
-          | Welcome to
-          strong  Big Picture
-          |  a responsive site template designed by
-          |
-          a(href='https://html5up.net') HTML5 UP
-          br
-          | and released for free under the
-          |
-          a(href='https://html5up.net/license') Creative Commons Attribution license.
+          h2 Web Developer.
+        ul.tags
+          li Learner
+          li Full-stack
+          li Front-end focused
         footer
           a.button.style2.down(href='#one' v-smooth-scroll) More
     // One
@@ -50,11 +44,27 @@
         // Gallery
         .gallery(v-in-viewport)
           article.from-left
-            a.image.fit(href='/images/fulls/01.jpg')
-              img(src='/images/thumbs/01.jpg', title='The Anonymous Red', alt='')
+            .image.fit
+              img(src='/images/actsoflove-screenshot.png', title='The Anonymous Red', alt='')
+              .teaser-background
+              .teaser-foreground
+                header
+                  h3 The Anonmyous Red
+                p
+                  | Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+                  | Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
+                  | arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.
           article.from-right
-            a.image.fit(href='/images/fulls/02.jpg')
-              img(src='/images/thumbs/02.jpg', title='Airchitecture II', alt='')
+            .image.fit
+              img(src='/images/lovebasedculture-screenshot.png', title='Airchitecture II', alt='')
+              .teaser-background
+              .teaser-foreground
+                header
+                  h3 Airchitecture II
+                p
+                  | Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+                  | Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
+                  | arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.
           article.from-left
             a.image.fit(href='/images/fulls/03.jpg')
               img(src='/images/thumbs/03.jpg', title='Air Lounge', alt='')

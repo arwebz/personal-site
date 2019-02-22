@@ -14,7 +14,7 @@
   margin: 0 auto _size(element-margin) auto;
 
   article {
-    @include vendor("transition", ("transform 1s ease", "opacity 1s ease"));
+    @include vendor("transition", ("transform 0.5s ease", "opacity 1s ease"));
     @include vendor("transform", "translateX(0)");
     width: 50%;
     position: relative;
@@ -23,6 +23,49 @@
     .image {
       margin: 0;
       display: block;
+      position: relative;
+      overflow: hidden;
+      max-height: calc(210px + 5vw);
+      cursor: pointer;
+
+      img {
+        object-fit: cover;
+      }
+
+      .teaser-background,
+      .teaser-foreground {
+        @include vendor(
+          "transition",
+          ("transform 0.5s ease", "opacity 1.2s ease")
+        );
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+
+      .teaser-background {
+        background-color: _palette(dark, bg);
+      }
+
+      .teaser-foreground {
+        @include vendor("transform", "translateY(-100%)");
+        padding: 0.2em;
+        color: _palette(dark, fg);
+      }
+
+      &:hover {
+        .teaser-background {
+          opacity: 0.7;
+        }
+
+        .teaser-foreground {
+          @include vendor("transform", "translateY(0)");
+          opacity: 1;
+        }
+      }
     }
 
     @for $i from 1 through 23 {
