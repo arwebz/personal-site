@@ -2,7 +2,7 @@
   Layout
     nav-menu
     // Intro
-    section#intro.main.style1.dark.fullscreen
+    section#intro.main.style1.dark.fullscreen(v-in-viewport)
       .content
         header
           h2 Hey.
@@ -19,7 +19,7 @@
         footer
           a.button.style2.down(href='#one' v-smooth-scroll) More
     // One
-    section#one.main.style2.right.dark.fullscreen
+    section#one.main.style2.right.dark.fullscreen(v-in-viewport)
       .content.box.style2
         header
           h2 What I Do
@@ -29,7 +29,7 @@
           | id varius justo euismod in. Curabitur egestas consectetur magna.
       a.button.style2.down.anchored(href='#two' v-smooth-scroll) Next
     // Two
-    section#two.main.style2.left.dark.fullscreen
+    section#two.main.style2.left.dark.fullscreen(v-in-viewport)
       .content.box.style2
         header
           h2 Who I Am
@@ -39,7 +39,7 @@
           | id varius justo euismod in. Curabitur egestas consectetur magna.
       a.button.style2.down.anchored(href='#work' v-smooth-scroll) Next
     // Work
-    section#work.main.style3.primary
+    section#work.main.style3.primary.fullscreen
       .content
         header
           h2 My Work
@@ -48,7 +48,7 @@
             | Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
             | arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.
         // Gallery
-        .gallery
+        .gallery(v-in-viewport)
           article.from-left
             a.image.fit(href='/images/fulls/01.jpg')
               img(src='/images/thumbs/01.jpg', title='The Anonymous Red', alt='')
@@ -68,9 +68,9 @@
             a.image.fit(href='/images/fulls/06.jpg')
               img(src='/images/thumbs/06.jpg', title='Bent IX', alt='')
     // Contact
-    section#contact.main.style3.secondary
+    section#contact.main.style3.secondary(v-in-viewport)
       .content
-        header
+        header#say-hello
           h2 Say Hello.
           p Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
         .box

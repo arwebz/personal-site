@@ -44,8 +44,13 @@
       margin: 0;
     }
 
-    &.inactive > .content {
-      opacity: 0;
+    &:not(.in-viewport) {
+      &.above-viewport,
+      &.below-viewport {
+        > .content {
+          opacity: 0;
+        }
+      }
     }
   }
 
@@ -71,13 +76,16 @@
       @include vendor("justify-content", "flex-end");
     }
 
-    &.inactive {
-      &.left > .content {
-        @include vendor("transform", "translateX(-100%)");
-      }
+    &:not(.in-viewport) {
+      &.above-viewport,
+      &.below-viewport {
+        &.left > .content {
+          @include vendor("transform", "translateX(-100%)");
+        }
 
-      &.right > .content {
-        @include vendor("transform", "translateX(100%)");
+        &.right > .content {
+          @include vendor("transform", "translateX(100%)");
+        }
       }
     }
   }

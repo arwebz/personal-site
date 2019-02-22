@@ -109,9 +109,12 @@
     position: relative;
   }
 
-  &.inactive {
-    .box {
-      @include vendor("transform", "translateY(100%)");
+  &:not(.in-viewport) {
+    &.above-viewport,
+    &.below-viewport {
+      .box {
+        @include vendor("transform", "translateY(100%)");
+      }
     }
   }
 

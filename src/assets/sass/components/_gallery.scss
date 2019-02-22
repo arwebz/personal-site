@@ -36,24 +36,27 @@
     }
   }
 
-  &.inactive {
-    article {
-      opacity: 0;
+  &:not(.in-viewport) {
+    &.above-viewport,
+    &.below-viewport {
+      article {
+        opacity: 0;
 
-      &.from-left {
-        @include vendor("transform", "translateX(-14em)");
-      }
+        &.from-left {
+          @include vendor("transform", "translateX(-14em)");
+        }
 
-      &.from-right {
-        @include vendor("transform", "translateX(14em)");
-      }
+        &.from-right {
+          @include vendor("transform", "translateX(14em)");
+        }
 
-      &.from-top {
-        @include vendor("transform", "translateY(-7em)");
-      }
+        &.from-top {
+          @include vendor("transform", "translateY(-7em)");
+        }
 
-      &.from-bottom {
-        @include vendor("transform", "translateY(7em)");
+        &.from-bottom {
+          @include vendor("transform", "translateY(7em)");
+        }
       }
     }
   }
