@@ -34,6 +34,9 @@
 
       .teaser-background,
       .teaser-foreground {
+        @include breakpoint("<=small") {
+          display: none;
+        }
         @include vendor(
           "transition",
           ("transform 0.5s ease", "opacity 1.2s ease")
@@ -111,5 +114,33 @@
     article {
       width: 100%;
     }
+  }
+}
+
+.gallery-modal {
+  .v--modal {
+    @include breakpoint("<=small") {
+      width: calc(100% - 2rem) !important;
+      margin-left: 1rem;
+    }
+  }
+
+  .pop-out-enter-active,
+  .pop-out-leave-active {
+    transition: all 0.5s;
+  }
+  .pop-out-enter,
+  .pop-out-leave-active {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  .image {
+    max-height: 300px;
+    overflow: hidden;
+  }
+
+  .content {
+    padding: 0.5rem;
   }
 }

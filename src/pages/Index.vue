@@ -42,8 +42,19 @@
             | Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
             | arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.
         // Gallery
+        modal.gallery-modal(name='anonymous_red' height='auto' transition='pop-out')
+          .image.fit
+            img(src='/images/actsoflove-screenshot.png', title='The Anonymous Red', alt='')
+          .content
+            header
+              h2 The Anonymous Red
+              h3 July 2018 to August 2018
+            p
+              | Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+              | Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
+              | arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.
         .gallery(v-in-viewport)
-          article.from-left
+          article.from-left(@click="imageClicked")
             .image.fit
               img(src='/images/actsoflove-screenshot.png', title='The Anonymous Red', alt='')
               .teaser-background
@@ -135,6 +146,11 @@ import NavMenu from "~/components/NavMenu";
 export default {
   components: {
     NavMenu
+  },
+  methods: {
+    imageClicked() {
+      this.$modal.show("anonymous_red");
+    }
   }
 };
 </script>
