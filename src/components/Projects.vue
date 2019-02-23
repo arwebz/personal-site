@@ -7,25 +7,26 @@
       :type="typeFromIndex(index)"
       @selected="selectProject"
     )
-    modal.gallery-modal(
-      name='selected-project'
-      height='auto'
-      transition='pop-out'
-      :scrollable="true"
-    )
-      .image.fit
-        img(:src='selectedProject.thumb', :title='selectedProject.name', :alt='selectedProject.name')
-      .content
-        header
-          h2 {{selectedProject.title}}
-          h3(v-if="selectedProject.subtitle") {{selectedProject.subtitle}}
-        div(v-html="selectedProject.content")
-        p
-          a(
-            v-if="selectedProject.moreInfo != null"
-            :href="selectedProject.moreInfo.link"
-            target="_blank"
-          ) {{ selectedProject.linkDisplay }}
+    ClientOnly
+      modal.gallery-modal(
+        name='selected-project'
+        height='auto'
+        transition='pop-out'
+        :scrollable="true"
+      )
+        .image.fit
+          img(:src='selectedProject.thumb', :title='selectedProject.name', :alt='selectedProject.name')
+        .content
+          header
+            h2 {{selectedProject.title}}
+            h3(v-if="selectedProject.subtitle") {{selectedProject.subtitle}}
+          div(v-html="selectedProject.content")
+          p
+            a(
+              v-if="selectedProject.moreInfo != null"
+              :href="selectedProject.moreInfo.link"
+              target="_blank"
+            ) {{ selectedProject.linkDisplay }}
 </template>
 
 <static-query>

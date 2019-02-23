@@ -10,7 +10,8 @@
           li Full-stack
           li Front-end focused
         footer
-          a.button.style2.down(href='#one' v-smooth-scroll) More
+          ClientOnly
+            a.button.style2.down(href='#one' v-smooth-scroll) More
     // One
     section#one.main.style2.right.dark.fullscreen(v-in-viewport)
       .content.box.style2
@@ -21,7 +22,8 @@
           | consulting industry. As a software consultant, I create software
           | for various clients in the Houston area helping them leverage their
           | strategic advantage.
-      a.button.style2.down.anchored(href='#two' v-smooth-scroll) Next
+      ClientOnly
+        a.button.style2.down.anchored(href='#two' v-smooth-scroll) Next
     // Two
     section#two.main.style2.left.dark.fullscreen(v-in-viewport)
       .content.box.style2
@@ -36,7 +38,8 @@
           | well-versed in several technology stacks. When I'm not poring over
           | well-written documentation you can find me exercising, playing
           | with my 3 cats, or spending time with my wife.
-      a.button.style2.down.anchored(href='#work' v-smooth-scroll) Next
+      ClientOnly
+        a.button.style2.down.anchored(href='#work' v-smooth-scroll) Next
     // Work
     section#work.main.style3.primary.fullscreen
       .content
