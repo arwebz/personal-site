@@ -48,52 +48,7 @@
             | demonstrated by the diversity of technologies used in the various
             | projects I have been a part of.
         // Gallery
-        modal.gallery-modal(name='anonymous_red' height='auto' transition='pop-out')
-          .image.fit
-            img(src='/images/actsoflove-screenshot.png', title='The Anonymous Red', alt='')
-          .content
-            header
-              h2 The Anonymous Red
-              h3 July 2018 to August 2018
-            p
-              | Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-              | Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
-              | arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.
-        .gallery(v-in-viewport)
-          article.from-left(@click="imageClicked")
-            .image.fit
-              img(src='/images/actsoflove-screenshot.png', title='The Anonymous Red', alt='')
-              .teaser-background
-              .teaser-foreground
-                header
-                  h3 The Anonmyous Red
-                p
-                  | Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-                  | Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
-                  | arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.
-          article.from-right
-            .image.fit
-              img(src='/images/lovebasedculture-screenshot.png', title='Airchitecture II', alt='')
-              .teaser-background
-              .teaser-foreground
-                header
-                  h3 Airchitecture II
-                p
-                  | Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-                  | Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
-                  | arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.
-          article.from-left
-            a.image.fit(href='/images/fulls/03.jpg')
-              img(src='/images/thumbs/03.jpg', title='Air Lounge', alt='')
-          article.from-right
-            a.image.fit(href='/images/fulls/04.jpg')
-              img(src='/images/thumbs/04.jpg', title='Carry on', alt='')
-          article.from-left
-            a.image.fit(href='/images/fulls/05.jpg')
-              img(src='/images/thumbs/05.jpg', title='The sparkling shell', alt='')
-          article.from-right
-            a.image.fit(href='/images/fulls/06.jpg')
-              img(src='/images/thumbs/06.jpg', title='Bent IX', alt='')
+        projects
     // Contact
     section#contact.main.style3.secondary(v-in-viewport)
       .content
@@ -149,13 +104,27 @@ query {
 
 <script>
 import NavMenu from "~/components/NavMenu";
+import Projects from "~/components/Projects";
 export default {
   components: {
-    NavMenu
+    NavMenu,
+    Projects
+  },
+  data() {
+    return {
+      areImagesHidden: false
+    };
+  },
+  computed: {
+    galleryArticleClass() {
+      return {
+        hidden: this.areImagesHidden
+      };
+    }
   },
   methods: {
-    imageClicked() {
-      this.$modal.show("anonymous_red");
+    hideImages() {
+      this.areImagesHidden = true;
     }
   }
 };

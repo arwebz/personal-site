@@ -12,7 +12,7 @@ import "~/assets/sass/main.scss";
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.use(vueSmoothScroll);
-  Vue.use(VModal);
+  Vue.use(VModal, { dynamic: true, injectModalsContainer: true });
 
   Vue.directive("in-viewport", inViewportDirective);
 

@@ -1,15 +1,23 @@
 <template lang="pug">
-  PageSection#project
-    h3.title {{project.title}}
-    h6.has-text-grey.subtitle {{subtitle}}
-    div(v-html="project.content")
-    p.link
-      a(v-if="moreInfo != null" :href="moreInfo.link") {{ linkDisplay }}
+  gallery-item(
+    :name="project.title"
+    src="/images/actsoflove-screenshot.png"
+    :subhead="subtitle"
+    type="from-left"
+  )
+    template(v-slot:summary)
+      div(v-html="project.content")
+    template(v-slot:description)
+      div(v-html="project.content")
 </template>
 
 <script>
+import GalleryItem from "~/components/GalleryItem";
 import { formatProjectDate } from "~/helpers/formatProjectDate";
 export default {
+  components: {
+    GalleryItem
+  },
   props: ["project"],
   methods: {
     attachLinkText(obj, linkText) {

@@ -1,12 +1,13 @@
 <template lang="pug">
-  Layout(
-    title="Projects"
-    subtitle="The best thing about starting a new project is the satisfaction I get from learning something new."
-    header-type="is-dark"
-    header-image="/coding.jpeg"
-  )
-    project(v-if="" v-for="{ node } in projects" :key="node.id" :project="node")
- </template>
+  .gallery(v-in-viewport)
+    project(
+      v-for="{ node } in projects"
+      :key="node.id"
+      :project="node"
+      :class="galleryArticleClass"
+      @click.native="hideImages"
+    )
+</template>
 
 <static-query>
   query Projects {
@@ -34,16 +35,34 @@
 </static-query>
 
 <script>
-import { orderBy } from "lodash";
+import NavMenu from "~/components/NavMenu";
+import GalleryItem from "~/components/GalleryItem";
 import Project from "~/components/Project";
-
+import { orderBy } from "lodash";
 export default {
   components: {
+    NavMenu,
+    GalleryItem,
     Project
   },
+  data() {
+    return {
+      areImagesHidden: false
+    };
+  },
   computed: {
+    galleryArticleClass() {
+      return {
+        hidden: this.areImagesHidden
+      };
+    },
     projects() {
       return orderBy(this.$static.projects.edges, "node.start", "desc");
+    }
+  },
+  methods: {
+    hideImages() {
+      this.areImagesHidden = true;
     }
   }
 };
