@@ -22,11 +22,10 @@ ul {
     }
     li + li::before {
       content: "\2B24";
-      font-size: 9px;
+      font-size: 7px;
       position: relative;
-      margin-left: 0.2rem;
-      margin-right: 0.2rem;
-      bottom: 2px;
+      margin: 0 0.4rem;
+      bottom: 3px;
     }
   }
 

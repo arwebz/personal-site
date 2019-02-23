@@ -79,6 +79,14 @@
   background-attachment: fixed, fixed;
   background-position: top left, bottom center;
   background-repeat: repeat, no-repeat;
+
+  ul {
+    display: inline-block;
+    padding: 0 0.5rem;
+    font-weight: _font(weight-bold);
+    color: _palette(dark, fg);
+    background-color: _palette(dark, bg);
+  }
 }
 
 /* One */

@@ -18,9 +18,10 @@
         header
           h2 What I Do
         p
-          | I along with my company, Improving, am bringing trust back into the consulting
-          | industry. As a software consultant I help various clients in the Houston
-          | area leverage their strategic advantage in the software I create for them.
+          | I along with my company, Improving, am bringing trust back into the
+          | consulting industry. As a software consultant, I create software
+          | for various clients in the Houston area helping them leverage their
+          | strategic advantage.
       a.button.style2.down.anchored(href='#two' v-smooth-scroll) Next
     // Two
     section#two.main.style2.left.dark.fullscreen(v-in-viewport)
@@ -28,7 +29,7 @@
         header
           h2 Who I Am
         p
-          | I am adaptable software development professional
+          | I am an adaptable software development professional
           | eager to push the boundaries of my knowledge of software
           | development technologies and methods. I have a solid background in
           | Computer Science, having graduated with a B.S. from Texas A&M
@@ -98,7 +99,7 @@
       .content
         header#say-hello
           h2 Say Hello.
-          p We as humans are stronger when we put our minds together, so let's connect!
+          p We, as humans, are stronger when we put our minds together; so let's connect!
         .box
           form(method='post', action='#')
             .fields
