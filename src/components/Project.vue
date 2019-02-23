@@ -1,14 +1,13 @@
 <template lang="pug">
   gallery-item(
     :name="project.title"
-    src="/images/actsoflove-screenshot.png"
+    :src="project.thumb"
     :subhead="subtitle"
-    type="from-left"
+    :type="type"
+    @click.native="selected"
   )
-    template(v-slot:summary)
-      div(v-html="project.content")
-    template(v-slot:description)
-      div(v-html="project.content")
+    template(v-slot)
+      div(v-html="project.summary")
 </template>
 
 <script>
@@ -18,13 +17,21 @@ export default {
   components: {
     GalleryItem
   },
-  props: ["project"],
+  props: ["project", "type"],
   methods: {
     attachLinkText(obj, linkText) {
       return {
         ...obj,
         linkText
       };
+    },
+    selected() {
+      this.$emit("selected", {
+        ...this.project,
+        linkDisplay: this.linkDisplay,
+        subtitle: this.subtitle,
+        moreInfo: this.moreInfo
+      });
     }
   },
   computed: {
@@ -54,6 +61,9 @@ export default {
       }
     },
     linkDisplay() {
+      if (!this.moreInfo) {
+        return "";
+      }
       return this.moreInfo.linkText;
     },
     subtitle() {

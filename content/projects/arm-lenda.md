@@ -2,9 +2,14 @@
 title: ARM Lenda
 start: "2016-06"
 end: "2018-07"
+thumb: "/images/lenda-screenshot.png"
 client:
   name: Ag Resource Management
   link: https://www.armlend.com
+summary: >
+  Worked in a cross-functional scrum team to develop a management operations web
+  application for a company which provides risk management solutions for
+  agribusiness.
 ---
 
 Worked in a cross-functional scrum team to develop a management operations web

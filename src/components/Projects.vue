@@ -1,12 +1,31 @@
 <template lang="pug">
   .gallery(v-in-viewport)
     project(
-      v-for="{ node } in projects"
+      v-for="({ node }, index) in projects"
       :key="node.id"
       :project="node"
-      :class="galleryArticleClass"
-      @click.native="hideImages"
+      :type="typeFromIndex(index)"
+      @selected="selectProject"
     )
+    modal.gallery-modal(
+      name='selected-project'
+      height='auto'
+      transition='pop-out'
+      :scrollable="true"
+    )
+      .image.fit
+        img(:src='selectedProject.thumb', :title='selectedProject.name', :alt='selectedProject.name')
+      .content
+        header
+          h2 {{selectedProject.title}}
+          h3(v-if="selectedProject.subtitle") {{selectedProject.subtitle}}
+        div(v-html="selectedProject.content")
+        p
+          a(
+            v-if="selectedProject.moreInfo != null"
+            :href="selectedProject.moreInfo.link"
+            target="_blank"
+          ) {{ selectedProject.linkDisplay }}
 </template>
 
 <static-query>
@@ -17,16 +36,16 @@
           title,
           start,
           end,
+          thumb,
           client {
             name,
             link
           },
-          internal {
-            link
-          },
-          github {
-            link
-          },
+          moreInfo {
+            link,
+            linkText
+          }
+          summary,
           content
         }
       }
@@ -47,22 +66,21 @@ export default {
   },
   data() {
     return {
-      areImagesHidden: false
+      selectedProject: {}
     };
   },
   computed: {
-    galleryArticleClass() {
-      return {
-        hidden: this.areImagesHidden
-      };
-    },
     projects() {
       return orderBy(this.$static.projects.edges, "node.start", "desc");
     }
   },
   methods: {
-    hideImages() {
-      this.areImagesHidden = true;
+    selectProject(project) {
+      this.selectedProject = project;
+      this.$modal.show("selected-project");
+    },
+    typeFromIndex(index) {
+      return index % 2 === 0 ? "from-left" : "from-right";
     }
   }
 };

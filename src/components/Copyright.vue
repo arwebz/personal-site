@@ -1,5 +1,5 @@
 <template lang="pug">
-  p &copy; {{ year }} Martin Fracker, Jr. All Rights Reserved
+  li &copy; {{ year }} Martin Fracker, Jr. All Rights Reserved
 </template>
 
 <script>
