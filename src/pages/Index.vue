@@ -1,6 +1,5 @@
 <template lang="pug">
   Layout
-    nav-menu
     // Intro
     section#intro.main.style1.dark.fullscreen(v-in-viewport)
       .content
@@ -54,44 +53,13 @@
       .content
         header#say-hello
           h2 Say Hello.
-          p We, as humans, are stronger when we put our minds together; so let's connect!
+          p
+            | We, as humans, are stronger when we put our minds together; so
+            | let's connect!
+
         .box
-          form(method='post', action='#')
-            .fields
-              .field.half
-                input(type='text', name='name', placeholder='Name')
-              .field.half
-                input(type='email', name='email', placeholder='Email')
-              .field
-                textarea(name='message', placeholder='Message', rows='6')
-            ul.actions.special
-              li
-                input(type='submit', value='Send Message')
-    // Footer
-    footer#footer
-      // Icons
-      ul.icons
-        li
-          a.icon.fa-twitter(href='#')
-            span.label Twitter
-        li
-          a.icon.fa-facebook(href='#')
-            span.label Facebook
-        li
-          a.icon.fa-instagram(href='#')
-            span.label Instagram
-        li
-          a.icon.fa-linkedin(href='#')
-            span.label LinkedIn
-        li
-          a.icon.fa-dribbble(href='#')
-            span.label Dribbble
-        li
-          a.icon.fa-pinterest(href='#')
-            span.label Pinterest
-      // Menu
-      ul.menu
-        li © 2019 Martin Fracker, Jr.
+          contact-me
+    site-footer
 </template>
 
 <static-query>
@@ -103,12 +71,14 @@ query {
 </static-query>
 
 <script>
-import NavMenu from "~/components/NavMenu";
+import ContactMe from "~/components/ContactMe";
 import Projects from "~/components/Projects";
+import SiteFooter from "~/components/SiteFooter";
 export default {
   components: {
-    NavMenu,
-    Projects
+    ContactMe,
+    Projects,
+    SiteFooter
   },
   data() {
     return {

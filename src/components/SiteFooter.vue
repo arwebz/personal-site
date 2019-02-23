@@ -1,27 +1,25 @@
 <template lang="pug">
-  page-section.is-danger.has-text-centered
-    social-media-button.social(for="facebook")
-    social-media-button.social(for="linkedin")
-    social-media-button.social(for="github")
-    copyright.copyright
+  footer#footer
+    ul.icons
+      li
+        a.icon.fa-facebook(href="https://www.facebook.com/martin.fracker" target="_blank")
+          span.label Facebook
+      li
+        a.icon.fa-linkedin(href="https://www.linkedin.com/in/martinfrackerjr" target="_blank")
+          span.label LinkedIn
+      li
+        a.icon.fa-github(href="https://www.github.com/towerism" target="_blank")
+          span.label Github
+    ul.menu
+      li Copyright &copy; {{year}} Martin Fracker, Jr. All Rights Reserved
 </template>
 
 <script>
-import Copyright from "~/components/Copyright";
-import SocialMediaButton from "~/components/SocialMediaButton";
 export default {
-  components: {
-    Copyright,
-    SocialMediaButton
+  data() {
+    return {
+      year: new Date().getFullYear()
+    };
   }
 };
 </script>
-
-<style lang="less" scoped>
-.social {
-  display: inline-block;
-}
-.copyright {
-  padding-top: 50px;
-}
-</style>

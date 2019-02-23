@@ -5,7 +5,6 @@ import vueSmoothScroll from "vue2-smooth-scroll";
 import inViewportDirective from "vue-in-viewport-directive";
 import VModal from "vue-js-modal";
 import DefaultLayout from "~/layouts/Default";
-import PageSection from "~/components/PageSection";
 import "font-awesome/css/font-awesome.css";
 import "~/assets/sass/main.scss";
 
@@ -17,5 +16,4 @@ export default function(Vue, { router, head, isClient }) {
   Vue.directive("in-viewport", inViewportDirective);
 
   Vue.component("Layout", DefaultLayout);
-  Vue.component("PageSection", PageSection);
 }
