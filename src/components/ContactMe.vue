@@ -2,13 +2,14 @@
   form(@submit.prevent="onSubmit" :action="action" :name="formName" netlify)
     input(type="hidden" v-model="honeypot")
     input(type="hidden" name="to" v-model="form.to")
+    input(type="hidden" name="subject" v-model="form.subject")
     .fields
       .field.half
         input(type='text', name='name', placeholder='Name' v-model="form.name" required)
       .field.half
         input(type='email', name='email', placeholder='Email' v-model="form.email" required)
       .field
-        textarea(name='message', placeholder='Message', rows='6' v-model="form.text" required)
+        textarea(name='text', placeholder='Message', rows='6' v-model="form.text" required)
     ul.actions.special
       li
         input(type='submit', value='Send Message')
