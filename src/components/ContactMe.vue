@@ -1,24 +1,39 @@
 <template lang="pug">
-  form(@submit.prevent="onSubmit" :action="action" :name="formName" netlify)
-    input(type="hidden" v-model="honeypot")
-    input(type="hidden" name="to" v-model="form.to")
-    input(type="hidden" name="subject" v-model="form.subject")
-    .fields
-      .field.half
-        input(type='text', name='name', placeholder='Name' v-model="form.name" required)
-      .field.half
-        input(type='email', name='email', placeholder='Email' v-model="form.email" required)
-      .field
-        textarea(name='text', placeholder='Message', rows='6' v-model="form.text" required)
-    ul.actions.special
-      li
-        input(type='submit', value='Send Message')
+  #contact-me
+    grid-loader.loader(:loading="true" :class="loaderClasses")
+    form.contact-form(@submit.prevent="onSubmit" :action="action" :name="formName" netlify :class="formClasses")
+      input(type="hidden" v-model="honeypot")
+      input(type="hidden" name="to" v-model="form.to")
+      input(type="hidden" name="subject" v-model="form.subject")
+      .fields
+        .field.half
+          input(type='text', name='name', placeholder='Name' v-model="form.name" required)
+        .field.half
+          input(type='email', name='email', placeholder='Email' v-model="form.email" required)
+        .field
+          textarea(name='text', placeholder='Message', rows='6' v-model="form.text" required)
+      ul.actions.special
+        li
+          input(type='submit', value='Send Message')
+    .success(:class="successClasses")
+      header
+        .icon.fa-paw
+        h2 Thank you, {{form.name}}
+      p I'll get back to you soon!
+    .error(:class="errorClasses")
+      header
+        h2 Well this is unexpected
+      p Your message could not be sent. Please try again later.
 </template>
 
 <script>
 import axios from "axios";
 import querystring from "qs";
+import GridLoader from "vue-spinner/src/GridLoader";
 export default {
+  components: {
+    GridLoader
+  },
   data() {
     return {
       form: {
@@ -44,37 +59,103 @@ export default {
         subject: this.form.subject,
         text: this.form.text
       };
+    },
+    loaderClasses() {
+      return {
+        hidden: !this.isLoading || this.status === false
+      };
+    },
+    formClasses() {
+      return {
+        hidden: this.isLoading || this.status
+      };
+    },
+    errorClasses() {
+      return {
+        hidden: this.status !== false
+      };
+    },
+    successClasses() {
+      return {
+        hidden: this.status !== true
+      };
     }
   },
   methods: {
-    onSubmit() {
+    async onSubmit() {
       if (this.honeypot !== "") {
         return;
       }
       let formData = querystring.stringify(this.submissionPayload);
       this.isLoading = true;
-      axios
-        .post(this.action, formData)
-        .then(() => {
-          this.isLoading = false;
-          this.status = true;
-        })
-        .catch(() => {
-          this.status = false;
-          setTimeout(() => {
-            this.status = "";
-          }, 2000);
-        });
+      try {
+        await axios.post(this.action, formData);
+        this.isLoading = false;
+        this.status = true;
+      } catch (err) {
+        this.status = false;
+        this.isLoading = false;
+      }
     }
   }
 };
 </script>
 
-<style lang="less" scoped>
-#contact-form {
-  margin-top: 30px;
-}
-#message {
-  height: 12em;
+<style lang="scss" scoped>
+@import "../assets/sass/libs/_vendor";
+@import "../assets/sass/libs/_vars";
+@import "../assets/sass/libs/_functions";
+
+#contact-me {
+  position: relative;
+
+  .contact-form,
+  .loader,
+  .success {
+    opacity: 1;
+    @include vendor("transition", ("all 1s ease"));
+
+    &.hidden {
+      opacity: 0;
+    }
+  }
+
+  .loader {
+    $width: 70px;
+
+    position: absolute;
+    height: 100%;
+    top: 40%;
+    left: calc(50% - #{$width/2});
+    width: $width !important;
+  }
+
+  .success {
+    position: absolute;
+    width: 100%;
+    top: 32%;
+
+    &.hidden {
+      top: 100%;
+    }
+  }
+
+  .success,
+  .error {
+    h2 {
+      color: _palette(accent2, bg);
+    }
+  }
+
+  .error {
+    @include vendor("transition", ("height 1s ease", "margin 1s ease"));
+    height: 108px;
+    flex: 1;
+
+    &.hidden {
+      height: 0;
+      margin-bottom: -2em;
+    }
+  }
 }
 </style>
