@@ -15,7 +15,12 @@
         :scrollable="true"
       )
         .image.fit
-          img(:src='selectedProject.thumb', :title='selectedProject.name', :alt='selectedProject.name')
+          g-image(
+            :src='selectedProject.thumb',
+            :title='selectedProject.name',
+            :alt='selectedProject.name',
+            width="600px"
+            quality="40")
         .content
           header
             h2 {{selectedProject.title}}
