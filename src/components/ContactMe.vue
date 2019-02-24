@@ -1,6 +1,7 @@
 <template lang="pug">
   #contact-me
-    grid-loader.loader(:loading="true" :class="loaderClasses")
+    ClientOnly
+      grid-loader.loader(:loading="true" :class="loaderClasses")
     form.contact-form(@submit.prevent="onSubmit" :action="action" :name="formName" netlify :class="formClasses")
       input(type="hidden" v-model="honeypot")
       input(type="hidden" name="to" v-model="form.to")
@@ -29,10 +30,12 @@
 <script>
 import axios from "axios";
 import querystring from "qs";
-import GridLoader from "vue-spinner/src/GridLoader";
 export default {
   components: {
-    GridLoader
+    GridLoader: () =>
+      import("vue-spinner/src/GridLoader")
+        .then(m => m)
+        .catch()
   },
   data() {
     return {
