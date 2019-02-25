@@ -60,4 +60,8 @@ export default {
 .more {
   margin-top: 1em;
 }
+
+.box + .box {
+  margin-top: 2em;
+}
 </style>
