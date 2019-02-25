@@ -10,7 +10,8 @@
             p.post-date Posted {{node.date | date}}
 
           .summary(v-html="node.excerpt")
-          g-link.more(:to="node.path") Read More
+          .more
+            g-link(:to="node.path") Read More
 </template>
 
 <page-query>
@@ -49,5 +50,9 @@ export default {
 
 .post-title {
   font-size: 1.5rem;
+}
+
+.more {
+  margin-top: 1em;
 }
 </style>
