@@ -1,6 +1,6 @@
 ---
 title: Utilizing Feature Branching to Minimize Risk
-date: 2019/02/25
+date: 2019-02-25T00:00:00-0600
 excerpt: >
   Think about a time when you ran a demo for your product owner, and he or she
   told you they didn't like how one of your features turned out. You had to pull
