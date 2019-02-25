@@ -1,6 +1,7 @@
 <template lang="pug">
   header#header
-    h1 {{$static.metaData.siteName}}
+    h1
+      g-link(to="/") {{$static.metaData.siteName}}
     ClientOnly
       nav
         ul
