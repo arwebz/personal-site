@@ -1,5 +1,6 @@
 ---
 title: Programming is Like Writing Prose
+date: 2015-12-20
 excerpt: >
   Programming can be an artful craft. Last summer I read a book called Clean
   Code: A Handbook of Agile Software Craftsmanship by Robert C. Martin. Martin

@@ -1,8 +1,53 @@
 <template lang="pug">
   Layout
-    section.main.style3
+    section.main.style2.secondary
       .content
         header
-          h2 Blog
-        p this is my blog
+          h2 Martin's Blog
+        .box(v-for="{ node } in posts")
+          header
+            h3.post-title {{node.title}}
+            p.post-date Posted {{node.date | date}}
+
+          .summary(v-html="node.excerpt")
+          g-link.more(:to="node.path") Read More
 </template>
+
+<page-query>
+query Posts {
+  posts: allBlogPost {
+    edges {
+      node {
+        title,
+        excerpt,
+        tags,
+        date,
+        path
+        content
+      }
+    }
+  }
+}
+</page-query>
+
+<script>
+import { orderBy } from "lodash";
+
+export default {
+  computed: {
+    posts() {
+      return orderBy(this.$page.posts.edges, "node.date", "desc");
+    }
+  }
+};
+</script>
+
+<style lang="less" scoped>
+.summary {
+  vertical-align: left !important;
+}
+
+.post-title {
+  font-size: 1.5rem;
+}
+</style>

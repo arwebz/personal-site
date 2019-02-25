@@ -97,14 +97,14 @@
     .content > header {
       margin-bottom: 2em;
     }
+  }
 
-    &.primary {
-      background: _palette(bg);
-    }
+  &.primary {
+    background: _palette(bg);
+  }
 
-    &.secondary {
-      background: _palette(bg-alt);
-    }
+  &.secondary {
+    background: _palette(bg-alt);
   }
 
   &.dark {

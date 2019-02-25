@@ -3,8 +3,11 @@
 
 import inViewportDirective from "vue-in-viewport-directive";
 import DefaultLayout from "~/layouts/Default";
+import * as moment from "moment";
+
 import "font-awesome/css/font-awesome.css";
 import "~/assets/sass/main.scss";
+import "../node_modules/prism-themes/themes/prism-xonokai.css";
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
@@ -19,4 +22,5 @@ export default function(Vue, { router, head, isClient }) {
   Vue.directive("in-viewport", inViewportDirective);
 
   Vue.component("Layout", DefaultLayout);
+  Vue.filter("date", input => moment(input).format("MMMM Do YYYY"));
 }

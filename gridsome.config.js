@@ -25,6 +25,11 @@ module.exports = {
       typeName: "Skill"
     })
   ],
+  transformers: {
+    remark: {
+      plugins: ["@gridsome/remark-prismjs"]
+    }
+  },
   chainWebpack: config => {
     config.module
       .rule("pug")

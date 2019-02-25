@@ -62,7 +62,6 @@
 
         .box
           contact-me
-    site-footer
 </template>
 
 <static-query>
@@ -76,12 +75,10 @@ query {
 <script>
 import ContactMe from "~/components/ContactMe";
 import Projects from "~/components/Projects";
-import SiteFooter from "~/components/SiteFooter";
 export default {
   components: {
     ContactMe,
-    Projects,
-    SiteFooter
+    Projects
   },
   data() {
     return {
