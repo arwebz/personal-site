@@ -109,7 +109,7 @@ body {
 body {
   text-decoration: none;
 
-  &:before {
+  &.is-preload:before {
     @include vendor(
       "animation",
       (
