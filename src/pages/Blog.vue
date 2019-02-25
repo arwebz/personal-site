@@ -1,6 +1,6 @@
 <template lang="pug">
   Layout
-    section.main.style2.secondary
+    section.main.style4.secondary
       .content
         header
           h2 Martin's Blog

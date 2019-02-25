@@ -54,7 +54,8 @@
     }
   }
 
-  &.style2 {
+  &.style2,
+  &.style4 {
     @include vendor("align-items", "center");
     @include vendor("justify-content", "center");
     padding: 3em 0 3em 0;
@@ -136,7 +137,8 @@
   }
 
   @include breakpoint("<=xxlarge") {
-    &.style2 {
+    &.style2,
+    &.style4 {
       .content {
         width: 40%;
       }
@@ -144,7 +146,8 @@
   }
 
   @include breakpoint("<=large") {
-    &.style2 {
+    &.style2,
+    &.style4 {
       .content {
         width: 50%;
       }
@@ -152,7 +155,8 @@
   }
 
   @include breakpoint("<=medium") {
-    &.style2 {
+    &.style2,
+    &.style4 {
       .content {
         width: 60%;
       }
@@ -180,7 +184,14 @@
 
     &.style2 {
       padding: 6em 15px 6em 15px;
+    }
 
+    &.style4 {
+      padding: 1em 15px;
+    }
+
+    &.style2,
+    &.style4 {
       &:before,
       &:after {
         display: none !important;

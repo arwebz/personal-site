@@ -1,6 +1,6 @@
 <template lang="pug">
   Layout
-    section.main.style2
+    section.main.style4
       .content
         header
           h2.post-title {{$page.post.title}}
