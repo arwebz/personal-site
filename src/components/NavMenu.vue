@@ -5,15 +5,17 @@
       nav
         ul
           li
-            a(href='#intro' v-smooth-scroll) Intro
+            g-link(to='/#intro' v-smooth-scroll) Intro
           li
-            a(href='#one' v-smooth-scroll) What I Do
+            g-link(to='/#one' v-smooth-scroll) What I Do
           li
-            a(href='#two' v-smooth-scroll) Who I Am
+            g-link(to='/#two' v-smooth-scroll) Who I Am
           li
-            a(href='#work' v-smooth-scroll) My Work
+            g-link(to='/#work' v-smooth-scroll) My Work
           li
-            a(href='#contact' v-smooth-scroll) Contact
+            g-link(to='/#contact' v-smooth-scroll) Contact
+          li
+            g-link(to="/blog") Blog
 </template>
 
 <static-query>
