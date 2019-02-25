@@ -7,7 +7,8 @@
         .box(v-for="{ node } in posts")
           header
             h3.post-title {{node.title}}
-            p.post-date Posted {{node.date | date}}
+            p.post-date
+              small Posted {{node.date | date}}
 
           .summary(v-html="node.excerpt")
           .more
@@ -50,6 +51,10 @@ export default {
 
 .post-title {
   font-size: 1.5rem;
+}
+
+.post-date {
+  margin-top: 0.5em;
 }
 
 .more {

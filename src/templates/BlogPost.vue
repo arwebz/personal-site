@@ -4,7 +4,8 @@
       .content
         header
           h2.post-title {{$page.post.title}}
-          p.post-date Posted {{$page.post.date | date}}
+          p.post-date
+            small Posted {{$page.post.date | date}}
         div(v-html="$page.post.content")
 </template>
 
@@ -17,3 +18,9 @@ query Post ($path: String!) {
   }
 }
 </page-query>
+
+<style lang="less" scoped>
+.post-date {
+  margin: 0;
+}
+</style>
