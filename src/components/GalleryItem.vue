@@ -1,7 +1,7 @@
 <template lang="pug">
   article(:class="type")
     .image.fit
-      g-image(:src='src', :title='name', :alt='name', quality='20',  width="600px")
+      g-image(v-if="src" :src='src', :title='name', :alt='name', quality='20',  width="600px")
       .teaser-background
       .teaser-foreground
         .content
