@@ -15,7 +15,7 @@
             g-link(to='/#work' v-smooth-scroll) My Work
           li
             g-link(to='/#contact' v-smooth-scroll) Contact
-          li
+          li.keep-mobile
             g-link(to="/blog") Blog
 </template>
 
