@@ -13,6 +13,7 @@
         height='auto'
         transition='pop-out'
         :scrollable="true"
+        v-if="selectedProject.thumb"
       )
         .image.fit
           g-image(
