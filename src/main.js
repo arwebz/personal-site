@@ -22,5 +22,7 @@ export default function(Vue, { router, head, isClient }) {
   Vue.directive("in-viewport", inViewportDirective);
 
   Vue.component("Layout", DefaultLayout);
-  Vue.filter("date", input => moment(input).format("MMMM Do YYYY"));
+  Vue.filter("date", input => {
+    return moment(input, "YYYY/MM/DD").format("MMMM Do YYYY");
+  });
 }

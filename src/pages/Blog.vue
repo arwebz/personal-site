@@ -4,7 +4,7 @@
       .content
         header
           h2 Martin's Blog
-        .box(v-for="{ node } in posts")
+        .box(v-for="{ node } in posts" :key="node.id")
           header
             h3.post-title {{node.title}}
             p.post-date
@@ -20,6 +20,7 @@ query Posts {
   posts: allBlogPost {
     edges {
       node {
+        id,
         title,
         excerpt,
         tags,
