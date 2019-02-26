@@ -5,6 +5,7 @@ import inViewportDirective from "vue-in-viewport-directive";
 import DefaultLayout from "~/layouts/Default";
 import * as moment from "moment";
 import VueSocialSharing from "vue-social-sharing";
+import VueDisqus from "vue-disqus";
 
 import "font-awesome/css/font-awesome.css";
 import "~/assets/sass/main.scss";
@@ -21,6 +22,7 @@ export default function(Vue, { router, head, isClient }) {
   }
 
   Vue.use(VueSocialSharing);
+  Vue.use(VueDisqus);
 
   Vue.directive("in-viewport", inViewportDirective);
 

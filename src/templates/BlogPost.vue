@@ -27,6 +27,13 @@
                 i.icon.fa.fa-reddit
               network(network="email")
                 i.icon.fa.fa-envelope
+          hr
+          vue-disqus(
+            shortname="https-www-martinfrackerjr-com"
+            :identifier="$page.post.path"
+            :url="url"
+          )
+
 </template>
 
 <page-query>
