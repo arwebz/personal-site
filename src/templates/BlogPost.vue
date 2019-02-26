@@ -29,6 +29,7 @@
                 i.icon.fa.fa-envelope
           hr
           vue-disqus(
+            :title="$page.post.title"
             shortname="https-www-martinfrackerjr-com"
             :identifier="$page.post.path"
             :url="url"
