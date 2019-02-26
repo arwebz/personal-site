@@ -1,14 +1,28 @@
-# Default starter for Gridsome
+# Personal Site
 
-`
+> My personal brand and blog
 
-### 1. Install Gridsome CLI tool if you don't have
+## Development
 
-`npm install --global @gridsome/cli`
+### 1. Install Dependencies
 
-### 2. Create a Gridsome project
+`yarn install`
 
-1. `gridsome create my-gridsome-site` to install default starter </li>
-2. `cd my-gridsome-site` to open folder
-3. `gridsome develop` to start local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+### 2. Start development server
+
+`yarn develop`
+
+Website will run at `localhost:8080`
+
+GraphQL playground will be available at `localhost:8080/___explore`
+
+### Optional. Generate static site
+
+`yarn build`
+
+For an in depth documentation on how stuff works, see the [Gridsome
+Dcoumentation](https://gridsome.org/docs).
+
+## Acknowledgement
+
+[HTML5 Up](https://www.html5up.net) for the website theme.
