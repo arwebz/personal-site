@@ -12,11 +12,11 @@ tags:
   - version control
 ---
 
-Think about a time when you ran a demo for your product owner, and he or she
-told you they didn't like how one of your features turned out. You had to pull
-the feature out of the sprint increment if you hoped to avoid missing a
-release. In a situation like this, your team's diligence in following standard
-version control practices determines how costly this operation is.
+Think about a time when you ran a demo for your product owner, and they told
+you they didn't like how one of your features turned out. You had to pull the
+feature out of the sprint increment if you hoped to avoid missing a release. In
+a situation like this, your team's diligence in following standard version
+control practices determines how costly this operation is.
 
 No matter what your team's version control practices are, there is only one
 major thing that matters in a situation where you must yank a feature: does
