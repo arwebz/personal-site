@@ -10,6 +10,9 @@
       li
         a.icon.fa-github(href="https://www.github.com/towerism" target="_blank")
           span.label Github
+      li
+        a.icon.fa-rss(href="/rss.xml" target="_blank")
+          span.label RSS Feed
     ul.menu
       li Copyright &copy; {{year}} Martin Fracker, Jr. All Rights Reserved
 </template>

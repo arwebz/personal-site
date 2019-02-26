@@ -23,7 +23,30 @@ module.exports = {
     contentPlugin({
       directory: "skills",
       typeName: "Skill"
-    })
+    }),
+    {
+      use: "gridsome-plugin-rss",
+      options: {
+        contentTypeName: "BlogPost",
+        feedOptions: {
+          title: "Martin's Blog",
+          feed_url: "https://www.martinfrackerjr.com/rss.xml",
+          site_url: "https://www.martinfrackerjr.com"
+        },
+        feedItemOptions: node => ({
+          title: node.title,
+          url: `https://www.martinfrackerjr.com${node.path}`,
+          author: "Martin Fracker, Jr.",
+          description: node.excerpt,
+          categories: node.tags,
+          date: node.date
+        }),
+        output: {
+          dir: "./static",
+          name: "rss.xml"
+        }
+      }
+    }
   ],
   transformers: {
     remark: {
