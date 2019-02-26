@@ -37,6 +37,9 @@ query Posts {
 import { orderBy } from "lodash";
 
 export default {
+  metaInfo: {
+    title: "Martin's Blog"
+  },
   computed: {
     posts() {
       return orderBy(this.$page.posts.edges, "node.date", "desc");

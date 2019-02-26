@@ -13,7 +13,6 @@
             :title="$page.post.title"
             :description="description"
             :quote="description"
-            :hashtags="$page.post.tags"
             inline-template
           )
             div
@@ -36,6 +35,8 @@ query Post ($path: String!) {
     date
     content
     path
+    excerpt
+    tags
   }
 }
 </page-query>
@@ -44,6 +45,9 @@ query Post ($path: String!) {
 import * as truncate from "truncate";
 
 export default {
+  metaInfo: {
+    title: "Martin's Blog"
+  },
   computed: {
     url() {
       return `https://www.martinfrackerjr.com${this.$page.post.path}`;
