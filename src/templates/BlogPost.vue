@@ -8,6 +8,7 @@
             p.post-date
               small Posted {{$page.post.date | date}}
           div(v-html="$page.post.content")
+          hr
           social-sharing.social(
             :url="url"
             :title="$page.post.title"
