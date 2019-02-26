@@ -15,6 +15,8 @@
           span.label RSS Feed
     ul.menu
       li Copyright &copy; {{year}} Martin Fracker, Jr. All Rights Reserved
+      li
+        a(href="https://github.com/Towerism/personal-site" target="_blank") Source
 </template>
 
 <script>
