@@ -4,6 +4,7 @@ start: "2018-08"
 thumb: "/images/nextwaveconnect-screenshot.png"
 client:
   name: Social Media Company
+  link: https://www.myivo.org
 summary: >
   Working with a client which provides a social media platform to its clients to
   add features to and stabilize the platform. As a tech lead and full-stack
