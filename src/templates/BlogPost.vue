@@ -15,16 +15,16 @@
             :quote="description"
             inline-template
           )
-            div
-              network.network(network="facebook")
+            .icons
+              network(network="facebook")
                 i.icon.fa.fa-facebook
-              network.network(network="linkedin")
+              network(network="linkedin")
                 i.icon.fa.fa-linkedin
-              network.network(network="twitter")
+              network(network="twitter")
                 i.icon.fa.fa-twitter
-              network.network(network="reddit")
+              network(network="reddit")
                 i.icon.fa.fa-reddit
-              network.network(network="email")
+              network(network="email")
                 i.icon.fa.fa-envelope
 </template>
 
@@ -65,13 +65,9 @@ export default {
     margin-top: 0.5em;
   }
 
-  .social {
-    margin-top: 2em;
-
-    .network {
-      cursor: pointer;
-
-      margin-right: 0.6em;
+  .icons {
+    i {
+      text-align: left;
     }
   }
 }

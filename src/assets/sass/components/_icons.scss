@@ -6,19 +6,21 @@
 
 /* Icons */
 
-ul.icons {
+.icons {
   cursor: default;
 
   li {
     display: inline-block;
   }
 
-  a {
+  a,
+  i {
     display: inline-block;
     width: 2em;
     height: 2em;
     line-height: 2em;
     text-align: center;
+    cursor: pointer;
     border: 0;
   }
 }
