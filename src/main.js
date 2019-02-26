@@ -4,6 +4,7 @@
 import inViewportDirective from "vue-in-viewport-directive";
 import DefaultLayout from "~/layouts/Default";
 import * as moment from "moment";
+import VueSocialSharing from "vue-social-sharing";
 
 import "font-awesome/css/font-awesome.css";
 import "~/assets/sass/main.scss";
@@ -18,6 +19,8 @@ export default function(Vue, { router, head, isClient }) {
     const vueSmoothScroll = require("vue2-smooth-scroll").default;
     Vue.use(vueSmoothScroll);
   }
+
+  Vue.use(VueSocialSharing);
 
   Vue.directive("in-viewport", inViewportDirective);
 

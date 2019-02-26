@@ -1,12 +1,32 @@
 <template lang="pug">
   Layout
-    section.main.style4
-      .content
-        header
-          h2.post-title {{$page.post.title}}
-          p.post-date
-            small Posted {{$page.post.date | date}}
-        div(v-html="$page.post.content")
+    #blog-post
+      section.main.style4
+        .content
+          header
+            h2.post-title {{$page.post.title}}
+            p.post-date
+              small Posted {{$page.post.date | date}}
+          div(v-html="$page.post.content")
+          social-sharing.social(
+            :url="url"
+            :title="$page.post.title"
+            :description="description"
+            :quote="description"
+            :hashtags="$page.post.tags"
+            inline-template
+          )
+            div
+              network.network(network="facebook")
+                i.icon.fa.fa-facebook
+              network.network(network="linkedin")
+                i.icon.fa.fa-linkedin
+              network.network(network="twitter")
+                i.icon.fa.fa-twitter
+              network.network(network="reddit")
+                i.icon.fa.fa-reddit
+              network.network(network="email")
+                i.icon.fa.fa-envelope
 </template>
 
 <page-query>
@@ -15,12 +35,40 @@ query Post ($path: String!) {
     title
     date
     content
+    path
   }
 }
 </page-query>
 
-<style lang="less" scoped>
-.post-date {
-  margin-top: 0.5em;
+<script>
+import * as truncate from "truncate";
+
+export default {
+  computed: {
+    url() {
+      return `https://www.martinfrackerjr.com${this.$page.post.path}`;
+    },
+    description() {
+      return truncate(this.$page.post.excerpt, 180);
+    }
+  }
+};
+</script>
+
+<style lang="less">
+#blog-post {
+  .post-date {
+    margin-top: 0.5em;
+  }
+
+  .social {
+    margin-top: 2em;
+
+    .network {
+      cursor: pointer;
+
+      margin-right: 0.6em;
+    }
+  }
 }
 </style>
