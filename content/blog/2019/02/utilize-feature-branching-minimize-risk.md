@@ -13,7 +13,7 @@ tags:
 ---
 
 Think about a time when you ran a demo for your product owner, and he or she
-told you he didn't like how one of your features turned out. You had to pull
+told you they didn't like how one of your features turned out. You had to pull
 the feature out of the sprint increment if you hoped to avoid missing a
 release. In a situation like this, your team's diligence in following standard
 version control practices determines how costly this operation is.
