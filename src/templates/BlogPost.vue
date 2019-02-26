@@ -68,7 +68,7 @@ export default {
 
   .icons {
     i {
-      text-align: left;
+      text-align: center;
     }
   }
 }
