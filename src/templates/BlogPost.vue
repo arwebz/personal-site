@@ -6,17 +6,11 @@
           h2.post-title {{$page.post.title}}
           p.post-date
             small Posted {{$page.post.date | date}}
-        div(v-html="$page.post.content")
+        .post-content(v-html="$page.post.content")
         hr
-        social-sharing(:post="$page.post")
+        social-sharing.social(:post="$page.post")
         hr
-        vue-disqus(
-          :title="$page.post.title"
-          shortname="https-www-martinfrackerjr-com"
-          :identifier="$page.post.path"
-          :url="url"
-        )
-
+        comments.comments(:post="$page.post")
 </template>
 
 <page-query>
@@ -35,10 +29,12 @@ query Post ($path: String!) {
 <script>
 import * as truncate from "truncate";
 import SocialSharing from "~/components/SocialSharing";
+import Comments from "~/components/Comments";
 
 export default {
   components: {
-    SocialSharing
+    SocialSharing,
+    Comments
   },
   metaInfo: {
     title: "Martin's Blog"
@@ -51,8 +47,16 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .post-date {
   margin-top: 0.5em;
+}
+
+.post-content {
+  margin-bottom: 2em;
+}
+
+.comments {
+  margin-top: 2em;
 }
 </style>
