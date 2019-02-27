@@ -36,8 +36,10 @@ export default {
     SocialSharing,
     Comments
   },
-  metaInfo: {
-    title: "Martin's Blog"
+  metaInfo() {
+    return {
+      title: this.$page.post.title
+    };
   },
   computed: {
     url() {
