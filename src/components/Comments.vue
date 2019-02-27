@@ -11,7 +11,7 @@
     vue-disqus(
       v-if="enabled"
       :title="post.title"
-      shortname="https-www-martinfrackerjr-com"
+      shortname="martin-fracker-jr"
       :identifier="post.path"
       :url="url"
     )
