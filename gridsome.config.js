@@ -3,8 +3,11 @@
 
 var path = require("path");
 
+const siteUrl = "https://www.martinfrackerjr.com";
+
 module.exports = {
   siteName: "Martin Fracker, Jr.",
+  siteUrl,
   siteDescription: "A software developer committed to lifelong learning.",
   plugins: [
     contentPlugin({
@@ -30,8 +33,8 @@ module.exports = {
         contentTypeName: "BlogPost",
         feedOptions: {
           title: "Martin's Blog",
-          feed_url: "https://www.martinfrackerjr.com/rss.xml",
-          site_url: "https://www.martinfrackerjr.com"
+          feed_url: `${siteUrl}/rss.xml`,
+          site_url: siteUrl
         },
         feedItemOptions: node => ({
           title: node.title,
