@@ -49,6 +49,12 @@ module.exports = {
           name: "rss.xml"
         }
       }
+    },
+    {
+      use: "@gridsome/plugin-google-analytics",
+      options: {
+        id: "UA-70676108-1"
+      }
     }
   ],
   transformers: {
