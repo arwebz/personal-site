@@ -10,7 +10,7 @@
         hr
         social-sharing.social(:post="$page.post")
         hr
-        comments.comments(:post="$page.post")
+        comments(:post="$page.post")
 </template>
 
 <page-query>
@@ -63,9 +63,5 @@ export default {
 
 .post-content {
   margin-bottom: 2em;
-}
-
-.comments {
-  margin-top: 2em;
 }
 </style>

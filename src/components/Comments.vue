@@ -1,9 +1,8 @@
 <template lang="pug">
   #comments
-    ul.actions.special
+    ul.actions.special(v-if="!enabled")
       li
         button(
-          v-if="!enabled"
           type="submit"
           @click="enabled = true"
         )
@@ -32,3 +31,13 @@ export default {
   }
 };
 </script>
+
+<style lang="less">
+#comments {
+  margin-top: 2em;
+
+  .actions {
+    margin-top: 2.5em;
+  }
+}
+</style>
