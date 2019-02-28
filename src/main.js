@@ -3,6 +3,7 @@
 
 import inViewportDirective from "vue-in-viewport-directive";
 import DefaultLayout from "~/layouts/Default";
+import BlankLayout from "~/layouts/Blank";
 import * as moment from "moment";
 import VueSocialSharing from "vue-social-sharing";
 import VueDisqus from "vue-disqus";
@@ -30,6 +31,7 @@ export default function(Vue, { router, head, isClient }) {
   Vue.directive("external-link", ExternalLink);
 
   Vue.component("Layout", DefaultLayout);
+  Vue.component("BlankLayout", BlankLayout);
   Vue.filter("date", input => {
     return moment(input, "YYYY/MM/DD").format("MMMM Do YYYY");
   });
