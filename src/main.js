@@ -7,6 +7,8 @@ import * as moment from "moment";
 import VueSocialSharing from "vue-social-sharing";
 import VueDisqus from "vue-disqus";
 
+import ExternalLink from "~/directives/external-link";
+
 import "font-awesome/css/font-awesome.css";
 import "~/assets/sass/main.scss";
 import "../node_modules/prism-themes/themes/prism-xonokai.css";
@@ -25,6 +27,7 @@ export default function(Vue, { router, head, isClient }) {
   Vue.use(VueDisqus);
 
   Vue.directive("in-viewport", inViewportDirective);
+  Vue.directive("external-link", ExternalLink);
 
   Vue.component("Layout", DefaultLayout);
   Vue.filter("date", input => {

@@ -30,7 +30,7 @@
             a(
               v-if="selectedProject.moreInfo != null"
               :href="selectedProject.moreInfo.link"
-              target="_blank"
+              v-external-link
             ) {{ selectedProject.linkDisplay }}
 </template>
 
