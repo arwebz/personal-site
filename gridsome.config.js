@@ -55,6 +55,21 @@ module.exports = {
       options: {
         id: "UA-135375284-1"
       }
+    },
+    {
+      use: "@gridsome/plugin-sitemap",
+      options: {
+        config: {
+          "/blog/*": {
+            changefreq: "weekly",
+            priority: 0.7
+          },
+          "/": {
+            changefreq: "monthly",
+            priority: 0.5
+          }
+        }
+      }
     }
   ],
   transformers: {
