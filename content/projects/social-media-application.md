@@ -1,7 +1,7 @@
 ---
 title: Next Wave Connect
 start: "2018-08"
-thumb: "/images/nextwaveconnect-screenshot.png"
+thumb: "/images/nextwaveconnect-screenshot.webp"
 client:
   name: Social Media Company
   link: https://www.myivo.org

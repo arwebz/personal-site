@@ -2,7 +2,7 @@
 title: Love Based Culture
 start: "2019-01"
 end: "2019-04"
-thumb: "/images/lovebasedculture-screenshot.png"
+thumb: "/images/lovebasedculture-screenshot.webp"
 moreInfo:
   link: https://www.lovebasedculture.com
   linkText: www.lovebasedculture.com

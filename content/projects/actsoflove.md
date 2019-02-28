@@ -2,7 +2,7 @@
 title: Acts of Love
 start: "2019-01"
 end: "2019-04"
-thumb: "/images/actsoflove-screenshot.png"
+thumb: "/images/actsoflove-screenshot.webp"
 moreInfo:
   link: https://www.actsoflove.com
   linkText: www.actsoflove.com

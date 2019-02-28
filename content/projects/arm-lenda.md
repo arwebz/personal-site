@@ -2,7 +2,7 @@
 title: ARM Lenda
 start: "2016-06"
 end: "2018-07"
-thumb: "/images/lenda-screenshot.png"
+thumb: "/images/lenda-screenshot.webp"
 client:
   name: Ag Resource Management
   link: https://www.armlend.com

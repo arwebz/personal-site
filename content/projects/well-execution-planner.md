@@ -2,7 +2,7 @@
 title: Well Execution Planner
 start: "2018-07"
 end: "2018-08"
-thumb: "/images/oil-and-gas.jpg"
+thumb: "/images/oil-and-gas.webp"
 client:
   name: Oil and Gas Company
 summary: >
