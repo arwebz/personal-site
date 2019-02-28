@@ -1,8 +1,6 @@
 // This is where project configuration and installed plugin options are located.
 // Learn more: https://gridsome.org/docs/config
 
-var path = require("path");
-
 const siteUrl = "https://www.martinfrackerjr.com";
 
 module.exports = {
@@ -78,6 +76,9 @@ module.exports = {
     }
   },
   chainWebpack: config => {
+    if (process.env.DEBUGGING === "true") {
+      config.mode("development");
+    }
     config.module
       .rule("pug")
       .test(/\.pug$/)
