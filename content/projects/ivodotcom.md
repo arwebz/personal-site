@@ -2,7 +2,7 @@
 title: Ivo.com
 start: "2019-01"
 end: "2019-04"
-thumb: "/images/ivodotcom-screenshot.webp"
+thumb: "/images/ivodotcom-screenshot.jpg"
 moreInfo:
   link: https://www.ivo.com
   linkText: www.ivo.com
