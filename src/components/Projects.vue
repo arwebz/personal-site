@@ -16,6 +16,7 @@
       )
         .image.fit
           img(
+            :src='selectedProject.thumb',
             v-webp='selectedProject.thumb',
             :title='selectedProject.name',
             :alt='selectedProject.name'
