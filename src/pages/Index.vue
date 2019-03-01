@@ -1,7 +1,8 @@
 <template lang="pug">
   Layout
+    p This is Home
     // Intro
-    section#intro.main.style1.dark.fullscreen(v-in-viewport)
+    //section#intro.main.style1.dark.fullscreen(v-in-viewport)
       .content
         header
           h2 Web Developer.
@@ -13,7 +14,7 @@
           ClientOnly
             a.button.style2.down(href='#one' v-smooth-scroll) More
     // One
-    section#one.main.style2.right.dark.fullscreen(v-in-viewport)
+    //section#one.main.style2.right.dark.fullscreen(v-in-viewport)
       .content.box.style2
         header
           h2 What I Do
@@ -25,7 +26,7 @@
       ClientOnly
         a.button.style2.down.anchored(href='#two' v-smooth-scroll) Next
     // Two
-    section#two.main.style2.left.dark.fullscreen(v-in-viewport)
+    //section#two.main.style2.left.dark.fullscreen(v-in-viewport)
       .content.box.style2
         header
           h2 Who I Am
@@ -41,7 +42,7 @@
       ClientOnly
         a.button.style2.down.anchored(href='#work' v-smooth-scroll) Next
     // Work
-    section#work.main.style3.primary.fullscreen
+    //section#work.main.style3.primary.fullscreen
       .content
         header
           h2 My Work
@@ -52,7 +53,7 @@
         // Gallery
         projects
     // Contact
-    section#contact.main.style3.secondary(v-in-viewport)
+    //section#contact.main.style3.secondary(v-in-viewport)
       .content
         header#say-hello
           h2 Say Hello.
@@ -73,6 +74,7 @@ query {
 </static-query>
 
 <script>
+/*
 import ContactMe from "~/components/ContactMe";
 import Projects from "~/components/Projects";
 export default {
@@ -98,4 +100,5 @@ export default {
     }
   }
 };
+*/
 </script>
