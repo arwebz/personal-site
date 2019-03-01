@@ -7,6 +7,7 @@ import BlankLayout from "~/layouts/Blank";
 import * as moment from "moment";
 import VueSocialSharing from "vue-social-sharing";
 import VueDisqus from "vue-disqus";
+import VWebp from "v-webp";
 
 import ExternalLink from "~/directives/external-link";
 
@@ -26,6 +27,7 @@ export default function(Vue, { router, head, isClient }) {
 
   Vue.use(VueSocialSharing);
   Vue.use(VueDisqus);
+  Vue.use(VWebp);
 
   Vue.directive("in-viewport", inViewportDirective);
   Vue.directive("external-link", ExternalLink);

@@ -71,9 +71,11 @@
 
 /* Intro */
 
-#intro {
-  background: url("images/overlay.png"), url("/images/intro.webp");
+@mixin bg-with-overlay($bg) {
+  background: url("images/overlay.png"), url($bg);
+}
 
+#intro {
   ul {
     display: inline-block;
     padding: 0 0.5rem;
@@ -83,28 +85,52 @@
   }
 }
 
-/* One */
+@mixin bg-rules() {
+  #intro,
+  #one,
+  #two {
+    @include vendor("background-size", "cover");
+    background-position: top left, center center;
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
 
-#one {
-  background: url("images/overlay.png"), url("/images/one.webp");
+    @supports (-webkit-overflow-scrolling: touch) {
+      background-attachment: scroll;
+    }
+  }
 }
 
-/* Two */
+html {
+  &.webp {
+    #intro {
+      @include bg-with-overlay("/images/intro.webp");
+    }
 
-#two {
-  background: url("images/overlay.png"), url("/images/two.webp");
-}
+    #one {
+      @include bg-with-overlay("/images/one.webp");
+    }
 
-#intro,
-#one,
-#two {
-  @include vendor("background-size", "cover");
-  background-position: top left, center center;
-  background-repeat: repeat, no-repeat;
-  background-attachment: fixed, fixed;
+    #two {
+      @include bg-with-overlay("/images/two.webp");
+    }
 
-  @supports (-webkit-overflow-scrolling: touch) {
-    background-attachment: scroll;
+    @include bg-rules();
+  }
+
+  &:not(.webp) {
+    #intro {
+      @include bg-with-overlay("/images/intro.jpg");
+    }
+
+    #one {
+      @include bg-with-overlay("/images/one.jpg");
+    }
+
+    #two {
+      @include bg-with-overlay("/images/two.jpg");
+    }
+
+    @include bg-rules();
   }
 }
 

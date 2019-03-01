@@ -15,12 +15,11 @@
         :scrollable="true"
       )
         .image.fit
-          g-image(
-            :src='selectedProject.thumb',
+          img(
+            v-webp='selectedProject.thumb',
             :title='selectedProject.name',
-            :alt='selectedProject.name',
-            width="600px"
-            quality="40")
+            :alt='selectedProject.name'
+          )
         .content
           header
             h2 {{selectedProject.title}}
