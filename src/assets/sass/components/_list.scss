@@ -19,13 +19,22 @@ ul {
   &.tags {
     li {
       display: inline-block;
+      line-height: 0;
+
+      &::after {
+        content: "\2B24";
+        font-size: 6px;
+        position: relative;
+        margin: 0 0.4rem;
+        bottom: 3px;
+      }
     }
-    li + li::before {
-      content: "\2B24";
-      font-size: 6px;
-      position: relative;
-      margin: 0 0.4rem;
-      bottom: 3px;
+
+    li:last-child {
+      &::after {
+        display: none;
+      }
+      padding-bottom: 15px;
     }
   }
 
