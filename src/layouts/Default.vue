@@ -1,6 +1,6 @@
 <template lang="pug">
   #layout
-    nav-menu
+    //nav-menu
     slot
     site-footer
 </template>
