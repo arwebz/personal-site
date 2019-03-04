@@ -58,7 +58,11 @@ module.exports = {
       use: "@gridsome/plugin-sitemap",
       options: {
         config: {
-          "/blog/*": {
+          "/blog": {
+            changefreq: "weekly",
+            priority: 0.7
+          },
+          "/blog/**/*": {
             changefreq: "weekly",
             priority: 0.7
           },
