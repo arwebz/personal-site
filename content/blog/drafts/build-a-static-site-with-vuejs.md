@@ -1,8 +1,11 @@
 ---
 title: Build a Static Site with Vue.js
-date: 2019-03-02T00:00:00-0600
+date: 2019-03-05T22:21:00-0600
 excerpt: >
-  Excerpt here
+  I enjoy creating single page applications (SPA) as much as the next guy, but
+  not every modern website needs to be a SPA. Vue.js is a popular framework for
+  building SPAs, but over the last few years it has become a popular framework
+  for building multi-page websites as well, otherwise known as static sites.
 tags:
   - vue.js
   - javascript
