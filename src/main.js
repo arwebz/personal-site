@@ -12,7 +12,7 @@ import ExternalLink from "~/directives/external-link";
 
 import "font-awesome/css/font-awesome.css";
 import "~/assets/sass/main.scss";
-import "../node_modules/prism-themes/themes/prism-xonokai.css";
+import "../node_modules/prism-themes/themes/prism-vs.css";
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
