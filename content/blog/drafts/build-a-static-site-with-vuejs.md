@@ -22,15 +22,12 @@ We will use three main tools to build a static site:
 - Netlify to host our static site, and
 - Contentful to host our content.
 
-I chose Gridsome over the widely-chosen Nuxt.js
-framework because I have found it uses a GraphQL abstraction layer to be able
-to pull content from a variety of sources: the filesystem if you wanted to
-write your content in Markdown and version control it, or a cloud provider such
-as Contentful and a multitude of others cloud providers. Learn more about
-Gridsome [here](https://gridsome.org). As for hosting, I chose Netlify because
-it is a more comprehensive static site hosting solution than anything else I
-have found and has an ridiculously generous free-tier. Learn more about Netlify
-[here](https://www.netlify.com).
+I chose Gridsome over the widely-chosen Nuxt.js framework because I have found
+it better-suited out-of-the-box for a content heavy static site. Learn more
+about Gridsome [here](https://gridsome.org). As for hosting, I chose Netlify
+because it is a more comprehensive static site hosting solution than anything
+else I have found and has a ridiculously generous free-tier. Learn more about
+Netlify [here](https://www.netlify.com).
 
 # Getting started with Gridsome
 
@@ -64,8 +61,9 @@ choose the Blog example. What you name your space doesn't matter. I've named it
 'My Static Site'.
 
 Once your space is created and initialized, click on the button to 'Use the
-API'. This will show you your Space ID and Content Delivery API access token
-which we'll need to integrate our Contentful space into our static site.
+API'. This will show you your Space ID Content, Delivery API access token, and
+environment (should be 'master' by default) which we'll need to integrate our
+Contentful space into our static site.
 
 # Integrating our content into our static site
 
