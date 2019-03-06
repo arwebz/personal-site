@@ -40,4 +40,8 @@ export default {
     margin-top: 2.5em;
   }
 }
+
+.disqus-footer--logo {
+  display: none;
+}
 </style>
