@@ -3,7 +3,6 @@
     :url="url"
     :title="post.title"
     :description="description"
-    :quote="description"
     inline-template
   )
     .icons
