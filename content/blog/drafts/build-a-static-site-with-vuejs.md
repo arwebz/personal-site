@@ -110,6 +110,7 @@ With our static site connected to our Contentful space, we can build a page
 that displays all of the example blog posts that came with it. Create a file at
 `pages/Blog.vue`, and put the following code in it:
 
+<!-- prettier-ignore-start -->
 ```html
 <template>
   <Layout>
@@ -123,10 +124,20 @@ that displays all of the example blog posts that came with it. Create a file at
 </template>
 
 <page-query>
-  query Posts { posts: allContentfulBlogPost { edges { node { id, title, path }
-  } } }
+query Posts {
+  posts: allContentfulBlogPost {
+    edges {
+      node {
+        id,
+        title,
+        path
+      }
+    }
+  }
+}
 </page-query>
 ```
+<!-- prettier-ignore-end -->
 
 To be able to get to our new blog page from the home page, add this link to the
 `layouts/Default.vue`:
@@ -146,6 +157,7 @@ $ yarn add markdown-it
 
 Now we'll create a file at `templates/ContentfulBlogPost.vue` with the following content:
 
+<!-- prettier-ignore-start -->
 ```html
 <template>
   <Layout>
@@ -156,8 +168,17 @@ Now we'll create a file at `templates/ContentfulBlogPost.vue` with the following
 </template>
 
 <page-query>
-  query Post ($path: String!) { post: contentfulBlogPost (path: $path) { title,
-  heroImage { file { url } }, body } }
+query Post ($path: String!) {
+  post: contentfulBlogPost (path: $path) {
+    title,
+    heroImage {
+      file {
+        url
+      }
+    },
+    body
+  }
+}
 </page-query>
 
 <script>
@@ -180,6 +201,7 @@ Now we'll create a file at `templates/ContentfulBlogPost.vue` with the following
   }
 </style>
 ```
+<!-- prettier-ignore-end -->
 
 At this point, our static site is fully integrated with contentful. We can
 navigate to our blogs page and see all the sample posts. Clicking on any one of
