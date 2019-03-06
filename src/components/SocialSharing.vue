@@ -36,10 +36,11 @@ export default {
 
 <style lang="less">
 .social-sharing {
-  .icons {
+  &.icons {
     i {
-      text-align: center;
+      text-align: left;
     }
+    white-space: nowrap;
   }
 }
 </style>

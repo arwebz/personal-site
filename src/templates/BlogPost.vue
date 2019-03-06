@@ -8,7 +8,9 @@
             small Posted {{$page.post.date | date}}
         .post-content(v-html="$page.post.content")
         hr
-        social-sharing.social(:post="$page.post")
+        .share-container
+          call-out.call-out
+          social-sharing.social(:post="$page.post")
         hr
         comments(:post="$page.post")
 </template>
@@ -30,11 +32,13 @@ query Post ($path: String!) {
 import * as truncate from "truncate";
 import SocialSharing from "~/components/SocialSharing";
 import Comments from "~/components/Comments";
+import CallOut from "~/components/CallOut";
 
 export default {
   components: {
     SocialSharing,
-    Comments
+    Comments,
+    CallOut
   },
   metaInfo() {
     return {
@@ -56,12 +60,21 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
+@import "../assets/sass/libs/_breakpoints";
+
 .post-date {
   margin-top: 0.5em;
 }
 
 .post-content {
   margin-bottom: 2em;
+}
+
+.share-container {
+  @include breakpoint(">=medium") {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 </style>
