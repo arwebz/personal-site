@@ -22,8 +22,8 @@ building multi-page websites as well, otherwise known as static sites.
 We will use three main tools to build a static site:
 
 - Gridsome for our Vue.js-powered static site generator,
-- Netlify to host our static site, and
-- Contentful to host our content.
+- Contentful to host our content,
+- Netlify to host our static site.
 
 I chose Gridsome over the widely-chosen Nuxt.js framework because I have found
 it better-suited out-of-the-box for a content heavy static site. Learn more
