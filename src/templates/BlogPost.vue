@@ -4,8 +4,11 @@
       .content
         header
           h2.post-title {{$page.post.title}}
-          p.post-date
-            small Posted {{$page.post.date | date}}
+          .sub-header
+            span.item
+              small Posted {{$page.post.date | date}}
+            span.item
+              small {{readingTime.text}}
         .post-content(v-html="$page.post.content")
         hr
         .share-container
@@ -30,6 +33,7 @@ query Post ($path: String!) {
 
 <script>
 import * as truncate from "truncate";
+import * as readingTime from "reading-time";
 import SocialSharing from "~/components/SocialSharing";
 import Comments from "~/components/Comments";
 import CallOut from "~/components/CallOut";
@@ -55,6 +59,9 @@ export default {
   computed: {
     url() {
       return `https://www.martinfrackerjr.com${this.$page.post.path}`;
+    },
+    readingTime() {
+      return readingTime(this.$page.post.content);
     }
   }
 };
@@ -63,8 +70,14 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/sass/libs/_breakpoints";
 
-.post-date {
-  margin-top: 0.5em;
+.sub-header {
+  .item + .item::before {
+    content: "\2B24";
+    font-size: 5px;
+    position: relative;
+    bottom: 4px;
+    margin: 2em;
+  }
 }
 
 .post-content {
