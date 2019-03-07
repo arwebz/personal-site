@@ -18,12 +18,13 @@ ul {
     li {
       display: inline-block;
       line-height: 0;
+      padding: 0;
 
       &::after {
         content: "\2B24";
         font-size: 6px;
         position: relative;
-        margin: 0 0.4rem;
+        margin: 0 0.5rem;
         bottom: 3px;
       }
     }
