@@ -18,10 +18,18 @@
         header
           h2 What I Do
         p
-          | I along with my company, Improving, am bringing trust back into the
-          | consulting industry. As a software consultant, I create software
-          | for various clients in the Houston area helping them leverage their
-          | strategic advantage.
+          | I am a Senior Software Engineer at
+          |
+          a(href="https://seatzapp.com" target="_blank" rel="noopener noreferrer") sEATz
+          | .
+          | I developed and
+          | maintain both customer-facing and internal mobile applications. They
+          | are both used to support the business which is concerned with
+          | making it easier and more convenient to order concession-stand
+          | food and souvenirs without leaving the comfort of your
+          | seat. Why should you miss that sweet Pick 6 just because you
+          | need another beer? Well, with sEATz you can witness that Pick 6
+          | with your own eyes and drink all the beer you can afford.
       ClientOnly
         a.button.style2.down.anchored(href='#two' v-smooth-scroll) Next
     // Two
@@ -34,7 +42,7 @@
           | eager to push the boundaries of my knowledge of software
           | development technologies and methods. I have a solid background in
           | Computer Science, having graduated with a B.S. from Texas A&M
-          | University; and with 3+ years experience in Software Consulting, I am
+          | University; and with 3+ years experience in consulting and software engineering, I am
           | well-versed in several technology stacks. When I'm not poring over
           | well-written documentation you can find me exercising, playing
           | with my 3 cats, or spending time with my wife.
