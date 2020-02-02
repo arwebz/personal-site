@@ -22,14 +22,20 @@
           |
           a(href="https://seatzapp.com" target="_blank" rel="noopener noreferrer") sEATz
           | .
-          | I developed and
-          | maintain both customer-facing and internal mobile applications. They
-          | are both used to support the business which is concerned with
-          | making it easier and more convenient to order concession-stand
-          | food and souvenirs without leaving the comfort of your
-          | seat. Why should you miss that sweet Pick 6 just because you
-          | need another beer? Well, with sEATz you can witness that Pick 6
-          | with your own eyes and drink all the beer you can afford.
+          | As lead developer of the software engineering team, I developed and
+          | maintain both customer-facing and internal mobile applications as
+          | well as the backend services these apps talk to. I also automated
+          | and oversee all software deployments. Besides this, I manage our
+          | other developers which work on an internal web application which we
+          | use to manage our operations infrastructure.
+        p
+          | Our software is used
+          | to support the business which is concerned with making it easier
+          | and more convenient to order concession-stand food and souvenirs
+          | without leaving the comfort of your seat. Why should taking your
+          | kids to a sporting event make it difficult to order food, drinks,
+          | and alcohol but also enjoy every minute of the game.  With sEATz it
+          | doesn't have to be, because we will deliver it all to you!
       ClientOnly
         a.button.style2.down.anchored(href='#two' v-smooth-scroll) Next
     // Two
