@@ -71,6 +71,15 @@
   }
 }
 
+.gallery-modal {
+  .v--modal-background-click {
+    .v--modal-box {
+      max-height: 60vh;
+      overflow-y: scroll;
+    }
+  }
+}
+
 @mixin bg-rules() {
   #intro,
   #one,
